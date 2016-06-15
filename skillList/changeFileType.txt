@@ -1,0 +1,10 @@
+批量改变文件后缀
+
+windows：
+如把所有.txt文件改为.js文件
+把文件集合在同一文件夹，在这个文件夹内创建一个.bat文件，编辑.bat文件。
+ren *.txt *.js
+
+
+linux：
+find ./ -name "*.txt" | awk -F "." '{print $2}' | xargs -i -t mv ./{}.txt  ./{}.js

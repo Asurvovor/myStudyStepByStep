@@ -1,0 +1,14 @@
+Min  压缩js件
+
+下载地址：http://www.crockford.com/javascript/jsmin.html
+
+使用方法：
+cmd命令行 执行 ：
+>  jsmin.exe  <src.js> src.min.js
+
+
+
+命令解释：
+第一个是jsmin.exe的路径，第二个是原始js件的路径，注意带尖括号，第三个是压缩后的件的路径。
+
+
