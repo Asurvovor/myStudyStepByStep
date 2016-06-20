@@ -4,13 +4,20 @@ function preparePlaceholder() {
 	placeholder.setAttribute("src", "../img/placeholder.gif");
 	placeholder.setAttribute("alt", "my image gallery");
 
+
 	var description = document.createElement("p");
 	description.setAttribute("id", "description");
 	var desctext = document.createTextNode("Choose an image");
 	
 	description.appendChild(desctext);
 
+	document.getElementsByTagName('body')[0].appendChild(placeholder);
+	document.getElementsByTagName('body')[0].appendChild(description);
+
+	var gallery = document.getElementById("imagegallery");
+
 }
+
 function insertAfter(newElement, targetElement) {
 	var parent = targetElement.parentNode;
 	if (parent.lastChild == targetElement) {
@@ -80,3 +87,4 @@ function addLoadEvent(func) {
 
 addLoadEvent(countBodyChildren);
 addLoadEvent(prepareGallery);
+addLoadEvent(preparePlaceholder);
