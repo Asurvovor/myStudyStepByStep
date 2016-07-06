@@ -10,6 +10,7 @@ function start(route) {
 
 		response.writeHead(200, {"Content-Type": "text/plain;charset=UTF-8"});
 		response.write("hello, world!长风破浪会有时，直挂云帆济沧海！");
+
 		response.end();
 	}
 
