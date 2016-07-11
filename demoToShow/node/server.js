@@ -6,14 +6,14 @@ function start(route, handle) {
 		var pathname = url.parse(request.url).pathname;	
 		console.log("Request for " + pathname + " received.");
 
-		//route(handle, pathname);
+		route(handle, pathname, response);
 
-		response.writeHead(200, {"Content-Type": "text/plain;charset=UTF-8"});
-		var content = route(handle, pathname);
-		response.write(content);
+		// response.writeHead(200, {"Content-Type": "text/plain;charset=UTF-8"});
+		// var content = route(handle, pathname);
+		// response.write(content);
 		//response.write("hello, world!长风破浪会有时，直挂云帆济沧海！");
 
-		response.end();
+		// response.end();
 	}
 
 
