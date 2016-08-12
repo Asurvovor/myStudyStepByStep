@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>show hide</title>
+	<style>
+		.outer{width: 200px;height: 200px;}
+		.inner{width: 200px;height:200px;position: absolute;}
+		.left-pic{background-color: red;}
+		.right-pic{background-color: green;}
+		.btn-out{text-align: center;width: 200px}
+		.btn{width: 25px;height: 5px;display:inline-block;margin: 0 5px;background-color: #e4e4e4;}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner left-pic" id="left_pic"></div>
+		<div class="inner right-pic" id="right_pic"></div>
+	</div>
+	<br />
+	<div class="btn-out">
+		<div class="btn btn1" id="btn1"></div>
+		<div class="btn btn2" id="btn2"></div>
+	</div>
+	
+
+<script>
+	window.onload=function(){
+		var btn1 = document.getElementById('btn1');
+		var btn2 = document.getElementById('btn2');
+		var left_pic = document.getElementById('left_pic');
+		var right_pic = document.getElementById('right_pic');
+
+		btn1.addEventListener('mouseover', function(){
+			left_pic.style.display = 'block';
+			right_pic.style.display = 'none';
+			btn1.style.backgroundColor = '#ff8400';
+			btn2.style.backgroundColor = '#e4e4e4';
+		});
+		btn2.addEventListener('mouseover', function(){
+			right_pic.style.display = 'block';
+			left_pic.style.display = 'none';
+			btn1.style.backgroundColor = '#e4e4e4';
+			btn2.style.backgroundColor = '#ff8400';
+		});
+
+
+	
+	var slide = (function refCnt(){
+		if (localStorage.cnt > 10){
+			localStorage.cnt = 0;
+		} else {
+			localStorage.cnt++;
+		}
+		var cnt = localStorage.cnt;
+		return cnt;
+	})();
+
+	if (slide % 2 == 0) {
+		left_pic.style.display = 'block';
+		right_pic.style.display = 'none';
+		btn1.style.backgroundColor = '#ff8400';
+	} else {
+		right_pic.style.display = 'block';
+		left_pic.style.display = 'none';
+		btn2.style.backgroundColor = '#ff8400';
+	}
+
+	};
+
+
+	
+</script>
+</body>
+</html>
