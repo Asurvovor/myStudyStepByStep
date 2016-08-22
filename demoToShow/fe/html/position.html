@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>move</title>
+</head>
+<body>
+  <p id="message">Whee!</p>
+  <p id="2">Whee!</p>
+  <p id="demo" style="background-color: green;width: 100px;height: 100px">demo</p>
+  <script>
+    function A(id) {
+      var ele = document.getElementById(id);
+      ele.style.backgroundColor = "red";
+    }
+
+    function B(func){
+      // alert(2);
+    }
+
+    B(A("demo"));
+  </script>
+  <script src="../js/addLoadEvent.js"></script>
+  <script src="../js/moveElement.js"></script>
+  <script src="../js/positionMessage.js"></script>
+  <script>
+
+  </script>
+</body>
+</html>
