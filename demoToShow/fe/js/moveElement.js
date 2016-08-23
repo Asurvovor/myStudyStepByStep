@@ -21,9 +21,6 @@ function moveElement(elementID, final_x, final_y, interval) {
   }
   elem.style.left = xpos + "px";
   elem.style.top = ypos + "px";
-  // var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
-  //注意上面的单引号，不可缺少，若没有，传参时，字符串合并，elementID的实参会把自带的双引号去掉，成为未定义的变量名
-  // movement = setTimeout(repeat, interval);
   movement = setTimeout(function () {
     moveElement(elementID,final_x,final_y,interval);
   },interval)
