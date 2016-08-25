@@ -1,0 +1,18 @@
+<div id="example">
+{{a}}
+</div>
+
+<script src="vue.min.js"></script>
+<script>
+  var data = { a: 1 }
+  var vm = new Vue({
+    el: '#example',
+    data: data,
+    created: function () {
+      console.log('a is: ' + this.a)
+    }
+  })
+  vm.$watch('a', function (newVal, oldVal) {
+    console.log("new:" + newVal + ",old:" + oldVal)
+  })
+</script>
