@@ -2,14 +2,22 @@ function prepareSlideshow() {
   if (!document.getElementsByTagName) return false;
   if (!document.getElementById) return false;
   if (!document.getElementById('linklist')) return false;
-  if (!document.getElementById('preview')) return false;
 
-  var preview = document.getElementById('preview');
+  var slideshow = document.createElement('div');
+  slideshow.setAttribute("id", "slideshow");
+  var preview = document.createElement('img');
+  preview.setAttribute("src", "../img/topics.gif");
+  preview.setAttribute("alt", "building blocks of web design");
+  preview.setAttribute("id", "preview");
+  slideshow.appendChild(preview);
+
+
   preview.style.position = "absolute";
-  preview.style.left = "0px";
-  preview.style.top = "0px";
+  // preview.style.left = "0px";
+  // preview.style.top = "0px";
 
   var list = document.getElementById('linklist');
+  insertAfter(slideshow, list);
   var links = document.getElementsByTagName('a');
 
   links[0].onmouseover = function() {
