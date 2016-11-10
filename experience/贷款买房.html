@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>贷款计算</title>
+  <style>
+  *{font-family: microsoft yahei;padding: 0;margin: 0;}
+  h1 {text-align: center;padding: 40px;}
+  table {text-align: center;border-spacing: 0;border-collapse: collapse;margin: 0 auto;border: 4px solid #000;}
+  thead {background-color: #8080FF;}
+  th {padding: 10px;border: 1px solid #000;font-weight: 600;font-size: 20px;}
+  tr:nth-child(even){background:#CCC;}
+  td {padding: 8px;border: 1px solid #000;}
+  </style>
+</head>
+<body>
+  <h1>公积金商贷对比</h1>
+  <div id="container" style="border-radius: 8px;overflow: hidden;margin: 0 auto;">
+  <table id="tb">
+    <thead>
+      <th colspan="2">钱\年</th>
+      <th colspan="2">20年</th>
+      <th colspan="2">30年</th>
+    </thead>
+    <tr>
+      <td colspan="2">额度</td>
+      <td>40万</td>
+      <td>60万</td>
+      <td>40万</td>
+      <td>60万</td>
+    </tr>
+    <tr>
+      <td rowspan="3">公积金<br/>3.25%</td>
+      <td>月供</td>
+      <td>2269</td>
+      <td>3403</td>
+      <td>1741</td>
+      <td>2611</td>
+    </tr>
+    <tr>
+      <td>月利息</td>
+      <td>602</td>
+      <td>903</td>
+      <td>630</td>
+      <td>944</td>
+    </tr>
+    <tr>
+      <td>总利息</td>
+      <td>144560</td>
+      <td>216720</td>
+      <td>226760</td>
+      <td>339960</td>
+    </tr>
+    <tr>
+      <td rowspan="3">商贷<br/>4.9%</td>
+      <td>月供</td>
+      <td>2618</td>
+      <td>3927</td>
+      <td>2123</td>
+      <td>3185</td>
+    </tr>
+    <tr>
+      <td>月利息</td>
+      <td>951</td>
+      <td>1427</td>
+      <td>1012</td>
+      <td>1518</td>
+    </tr>
+    <tr>
+      <td>总利息</td>
+      <td>228320</td>
+      <td>342480</td>
+      <td>364280</td>
+      <td>546600</td>
+    </tr>
+    <tr>
+      <td colspan="2">月供差</td>
+      <td>349</td>
+      <td>524</td>
+      <td>382</td>
+      <td>574</td>
+    </tr>
+    <tr>
+      <td colspan="2">利息总差</td>
+      <td>83760</td>
+      <td>125760</td>
+      <td>137520</td>
+      <td>206640</td>
+    </tr>
+  </table>
+  </div>
+  <script>
+    var tb = document.getElementById('tb');
+    var width = getComputedStyle(tb, false)['width'];
+    var container = document.getElementById('container');
+    container.style.width = (parseInt(width) + 8) + 'px';
+  </script>
+</body>
+</html>
