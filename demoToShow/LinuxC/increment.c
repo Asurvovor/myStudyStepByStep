@@ -6,9 +6,11 @@ int increment(int x) {
 
 int main(int argc, char const *argv[])
 {
-	int i = 1, j = 2;
+	int i = 2, j = 4;
 	i = increment(i);
 	j = increment(j);
 	printf("i=%d, j=%d\n", i, j);
 	return 0;
 }
+
+

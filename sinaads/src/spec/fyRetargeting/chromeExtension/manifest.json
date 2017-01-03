@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "test extension for fyr",
+  "description": "This extension for test fyr",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["fyr_install.js"]
+    }
+  ]
+}
