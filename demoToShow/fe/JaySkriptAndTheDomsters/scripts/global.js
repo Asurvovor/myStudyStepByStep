@@ -90,6 +90,7 @@ function prepareSlideshow() {
   if (!document.getElementsByTagName) return false;
   if (!document.getElementById) return false;
   if (!document.getElementById("intro")) return false;
+
   var intro = document.getElementById("intro");
   var slideshow = document.createElement('div');
   slideshow.setAttribute("id", "slideshow");
@@ -105,6 +106,7 @@ function prepareSlideshow() {
   preview.setAttribute("alt", "a glimpse of what awaits you");
   preview.setAttribute("id", "preview");
   slideshow.appendChild(preview);
+
   insertAfter(slideshow, intro);
 
   var links = document.getElementsByTagName('a');
