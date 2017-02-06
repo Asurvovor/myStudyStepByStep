@@ -20,6 +20,7 @@ function insertAfter(newElement,targetElement) {
   }
 }
 
+//首页高亮显示连接
 function highlightPage() {
   if (!document.getElementsByTagName) return false;
   if (!document.getElementById) return false;
@@ -42,7 +43,7 @@ function highlightPage() {
 
 addLoadEvent(highlightPage);
 
-
+//移动背景图
 function moveElement(elementID, final_x, final_y, interval) {
   if (!document.getElementById) return false;
   if (!document.getElementById(elementID)) return false;
@@ -135,6 +136,7 @@ function prepareSlideshow() {
 
 addLoadEvent(prepareSlideshow);
 
+//about页内部导航
 function showSection(id) {
   var sections = document.getElementsByTagName("section");
   for (var i = 0; i < sections.length; i++) {
@@ -168,3 +170,59 @@ function prepareInternalnav() {
 }
 
 addLoadEvent(prepareInternalnav);
+
+//photo页图片库
+function showPic(whichpic){
+  if (!document.getElementById('placeholder')) return true;
+  var source = whichpic.getAttribute("href");
+  var placeholder = document.getElementById("placeholder");
+  placeholder.setAttribute("src",source);
+  if (document.getElementById('description')) {
+    var text = whichpic.getAttribute("title") ? whichpic.getAttribute("title") : "";
+    var description = document.getElementById("description");
+    if (description.firstChild.nodeType == 3){
+      description.firstChild.nodeValue = text;
+    }
+  }
+  return true;
+}
+
+function preparePlaceholder() {
+  if (!document.createElement) return false;
+  if (!document.createTextNode) return false;
+  if (!document.getElementById) return false;
+  if (!document.getElementById("imagegallery")) return false;
+
+  var placeholder = document.createElement("img");
+  placeholder.setAttribute("id", "placeholder");
+  placeholder.setAttribute("src", "../img/placeholder.gif");
+  placeholder.setAttribute("alt", "my image gallery");
+
+
+  var description = document.createElement("p");
+  description.setAttribute("id", "description");
+  var desctext = document.createTextNode("Choose an image");
+
+  description.appendChild(desctext);
+
+  var gallery = document.getElementById("imagegallery");
+  insertAfter(description, gallery);
+  insertAfter(placeholder, description);
+}
+
+function prepareGallery() {
+  if (!document.getElementById) return false;
+  if (!document.getElementsByName) return false;
+  if (!document.getElementById("imagegallery")) return false;
+
+  var gallery = document.getElementById("imagegallery");
+  var links = gallery.getElementsByTagName("a");
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function () {
+      return !showPic(this);
+    }
+  }
+}
+addLoadEvent(preparePlaceholder);
+addLoadEvent(prepareGallery);

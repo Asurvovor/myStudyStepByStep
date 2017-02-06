@@ -91,3 +91,6 @@ article img {
     z-index: 99;
 }
 
+#imagegallery li {
+    display: inline;
+}
