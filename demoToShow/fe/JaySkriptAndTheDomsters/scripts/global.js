@@ -168,7 +168,6 @@ function prepareInternalnav() {
     }
   }
 }
-
 addLoadEvent(prepareInternalnav);
 
 //photo页图片库
@@ -192,19 +191,14 @@ function preparePlaceholder() {
   if (!document.createTextNode) return false;
   if (!document.getElementById) return false;
   if (!document.getElementById("imagegallery")) return false;
-
   var placeholder = document.createElement("img");
   placeholder.setAttribute("id", "placeholder");
   placeholder.setAttribute("src", "../img/placeholder.gif");
   placeholder.setAttribute("alt", "my image gallery");
-
-
   var description = document.createElement("p");
   description.setAttribute("id", "description");
   var desctext = document.createTextNode("Choose an image");
-
   description.appendChild(desctext);
-
   var gallery = document.getElementById("imagegallery");
   insertAfter(description, gallery);
   insertAfter(placeholder, description);
@@ -214,10 +208,8 @@ function prepareGallery() {
   if (!document.getElementById) return false;
   if (!document.getElementsByName) return false;
   if (!document.getElementById("imagegallery")) return false;
-
   var gallery = document.getElementById("imagegallery");
   var links = gallery.getElementsByTagName("a");
-
   for (var i = 0; i < links.length; i++) {
     links[i].onclick = function () {
       return !showPic(this);
