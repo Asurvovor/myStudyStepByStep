@@ -3,7 +3,7 @@
 int main(int argc, char *argv[]) {
     double pi = 3.1416;
     printf("sin(pi/2)=%f\nln1=%f\n", sin(pi/2), log(1.0));
-    int x = printf("hello");
-    printf("%d\n", x);
+    int x = printf("hello3");
+    printf("%d\n", x); //返回字符个数
     return 10;
 }
