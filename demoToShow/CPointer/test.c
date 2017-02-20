@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
   int  x;
-  printf("hello ///、/*world*/呵呵");//输出 hello /*world*/,说明在字符串内用/**/注释没用
+  printf("hello ///闅嗗瀯/*world*/娼炶劅娼炶劅");//鑴㈢洸椴佹灇 hello /*world*/,鑴ｇ鑴欐鑴劮鑴宠劙璺病楹撳簮鑴涜劮鑴剻/**/鑴冲瀯鑴㈣劌鑴欑鑴剻
   scanf("%d", &x);
   return 0;
 }

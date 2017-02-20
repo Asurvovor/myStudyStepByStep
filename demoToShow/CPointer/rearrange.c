@@ -14,5 +14,7 @@ int main(void){
   char output[MAX_INPUT];
   
   n_columns = read_column_numbers(columns, MAX_COLS);
-  while(){}
+  while(gets(input) != NULL) {
+
+  }
 }
