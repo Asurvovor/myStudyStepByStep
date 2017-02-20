@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <title>  新浪广告  </title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="http://d2.sina.com.cn/litong/zhitou/sinaads/release/sinaadToolkit.js"></script>
+    </head>
+    <body style="margin:0;padding:0">
+    <div id="container"></div>
+    <script>
+        var par = location.search.substr(1),
+            ary = par.split("${}");
+
+        var type = ary[0],
+            src = cleanUrl(decodeURIComponent(ary[1]).replace(/</g, '').replace(/>/g, ''), 'url'),
+            link = cleanUrl(sinaadToolkit.url.ensureURL(decodeURIComponent(ary[2]).replace(/</g, '').replace(/>/g, '')), 'url'),
+            width = parseInt(ary[3], 10) + 'px',
+            height = parseInt(ary[4], 10) + 'px',
+            monitor = ary[5] ? decodeURIComponent(ary[5]).replace(/</g, '').replace(/>/g, '') : '',
+            pv = ary[6] ? decodeURIComponent(ary[6]).replace(/</g, '').replace(/>/g, '') : '';
+
+        var srcAllowDomain = ['\\.sina\\.com\\.cn','\\.weibo\\.com','\\.sinaimg\\.cn', '^weibo\\.com'],
+            urlAllowDomain = ['\\.sina\\.com\\.cn','\\.weibo\\.com','\\.allyes\\.com', '\\.admaster\\.com\\.cn', '\\.miaozhen\\.com', '^weibo\\.com'];
+
+        function cleanUrl(url, type) {
+            var tmp = document.createElement('a');
+            //由于ie支持各种协议，这里限制一下
+            if(url.indexOf("http://") !== 0 && url.indexOf("https://") !== 0 && url.indexOf("//") === 0) {
+                url = "http:" + url;
+            }
+
+            tmp.href = url;
+            switch (type) {
+                case 'url':
+                    return tmp.href;
+                case 'domain':
+                    //ie下用净化方法去host会携带端口号，因此需要修正去除端口号
+                    return tmp.host ? tmp.host.split(':')[0] : '';
+                default:
+                    return url;
+            }
+        }
+
+        function checkDomain(url, allowDomain) {
+            // var reg = new RegExp('^(http|https):\\/\\/([^\\/\\?#]+\\.)*(' + allowDomain.join('|') + ')(\\/|\\?|#|$)');
+            // return reg.test(url);
+            var domain = cleanUrl(url, 'domain'),
+                reg = new RegExp('(' + allowDomain.join('|')+')$');
+            return url ? reg.test(domain) : true;
+        }
+
+        if ((type === 'flash' || type === 'image' || type === 'adbox') && checkDomain(src, srcAllowDomain)) {
+            // //发送曝光
+            // sinaadToolkit.array.each(pv.split('|'), function (url) {
+            //     url && sinaadToolkit.sio.log(url);
+            // });
+            // 
+            sinaadToolkit.ad.embed(
+                document.getElementById('container'),
+                type,
+                width,
+                height,
+                sinaadToolkit.ad.createHTML(
+                    type,
+                    src,
+                    width,
+                    height,
+                    link,
+                    monitor ? monitor.split('|') : []
+                )
+            );
+        }
+        window.blur();
+    </script>
+    </body>
+</html>

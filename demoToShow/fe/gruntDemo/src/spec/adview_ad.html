@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> ad </title>
+        <style>
+            html,body{padding:0;margin:0;}
+        </style>
+    </head>
+    <body>
+        <img src="http://img.adbox.sina.com.cn/pic/1505759360-1404476271393.jpg" />
+        <script>
+            function FeatureDot(options) {
+                var dotSrc = "http://d1.sina.com.cn/litong/zhitou/sinaads/demo/BrowserMonitor.swf";
+                options = options || {};
+                this.uuid = "adv_uuid_" + (+new Date()).toString(36);
+                this.dom = document.createElement('div');
+
+                this.dom.innerHTML = [
+                    '<embed',
+                        'width="10px"',
+                        'height="10px"',
+                        'wmode="transparent"',
+                        'name="' + this.uuid + '"',
+                        'allowscriptaccess="always"',
+                        'src="http://d1.sina.com.cn/litong/zhitou/sinaads/demo/BrowserMonitor.swf"',
+                        'type="application/x-shockwave-flash"',
+                        'pluginspage="http://www.macromedia.com/go/getflashplayer"',
+                    '/>'
+                ].join(' ');
+
+                this.dom.style.cssText = [
+                    'position:absolute',
+                    options.x ? 'left:' + options.x + 'px' : '',
+                    options.y ? 'top:' + options.y + 'px' : ''
+                ].join(';');
+
+                document.body.appendChild(this.dom);
+
+                this.dot = this.getMovie(this.uuid); 
+            }
+            FeatureDot.prototype = {
+                //先不做兼容
+                getMovie : function () {
+                    var name = this.uuid;
+                    return window.document[name] || window[name];
+                },
+                setPosition: function (x, y) {
+                    this.dom.style.left = x + 'px';
+                    this.dom.style.top = y + 'px';
+                },
+                //获取帧率
+                getFPS: function () {
+                    return this.dot.getFPS ? this.dot.getFPS() : 0;
+                }
+            };
+            (function () {
+                var freq = 1000;
+                var controlFeature = new FeatureDot({
+                    x: 0,
+                    y: -100
+                });
+                var testFeature = new FeatureDot({
+                    x: 10,
+                    y: 10
+                });
+
+                setInterval(function () {
+                    console.log('[' + (+new Date()) + '] control:' + controlFeature.getFPS() + " | test:" + testFeature.getFPS());
+                }, freq);
+            })();
+        </script>
+    </body>
+</html>

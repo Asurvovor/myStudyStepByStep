@@ -1,0 +1,2574 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> 扶翼重定向广告 </title>
+        <!--<style rel="stylesheet" type="text/css" href="./fyrad.css"></style>-->
+        <style>
+            body,html,dl,dt,dd,ul,li{
+                margin:0;
+                padding:0;
+            }
+            body,html{
+                font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+            }
+            .left-holder{
+              float:left;
+            }
+
+            .left-holder .bg,
+            .left-holder .front{
+              position:absolute;
+              width: 0;
+              height: 0;
+              top: 32px;
+              left: 0;
+              border:10px solid transparent;
+              _border-color:#fff;
+              border-right-color: #ccc;
+              overflow:hidden;
+              font-size:0px;
+            }
+            .left-holder .front{
+              left:2px;
+              border-right-color: #fff;
+              _border-right-color: #ccc;
+            }
+            .right-holder{
+              float:right;
+            }
+            .right-holder .bg,
+            .right-holder .front{
+              position:absolute;
+              width: 0;
+              height: 0;
+              top: 32px;
+              left: 12px;
+              border:10px solid transparent;
+              _border-color:#fff;
+              border-left-color: #ccc;
+              overflow:hidden;
+              font-size:0px;
+            }
+            .right-holder .front{
+              left:10px;
+              border-left-color: #fff;
+              _border-left-color:#ccc;
+            }
+
+            a:link{
+                text-decoration: none;
+            }
+
+            .ad-logo{
+                display: block;
+            }
+
+
+            /**1000_90**/
+            .ad1000_90{
+                border:2px solid red;
+                width: 996px;
+                overflow:hidden;
+            }
+            .ad1000_90 .ad-logo{
+                width:190px;
+                height:86px;
+                float:left;
+            }
+            .ad1000_90 .good-list-wrap{
+                width:738px;
+                height:86px;
+                overflow:hidden;
+                position:relative;
+                float:left;
+            }
+            .ad1000_90 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad1000_90 .good{
+                overflow: hidden;
+                float:left;
+                width:226px;
+                margin-right:30px;
+                position:relative;
+            }
+            .ad1000_90 .last-good{
+            }
+
+            .ad1000_90 .good-image{
+                float: left;
+                margin-right:10px;
+            }
+            .ad1000_90 .good-image img{
+                width: 86px;
+                height: 86px;
+                display: block;
+                border: none;
+            }
+            .ad1000_90 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                margin-top:10px;
+                word-break:break-all;
+                word-wrap:break-word;
+                white-space:pre-wrap;
+            }
+            .ad1000_90 .good-tip{
+                border-radius:99px;
+                color:#fff;
+                width:22px;
+                height:22px;
+                position:absolute;
+                left:0px;
+                top:6px;
+                font-size: 10px;
+                line-height: 22px;
+                font-style: italic;
+                display:none;
+            }
+            .ad1000_90 .good-buy{
+                display:block;
+                position:absolute;
+                right:0px;
+                bottom:6px;
+                font-size:12px;
+                line-height:22px;
+                padding:0px 5px;
+                text-align: center;
+                color:#fff;
+            }
+            .ad1000_90 .good-old-price{
+                font-size:12px;
+                font-style:italic;
+                line-height: 18px;
+                visibility:hidden;
+            }
+            .ad1000_90 .good-price{
+                font-size:15px;
+                font-style:italic;
+                font-weight: bold;
+                line-height: 18px;
+                text-decoration:line-through;
+            }
+            .ad1000_90 .btn{
+                position: relative;
+                height:86px;
+                width:34px;
+            }
+            .ad1000_90 .left-btn{
+                float:left;
+            }
+            .ad1000_90 .right-btn{
+                float:right;
+            }
+
+            /* 300_250 */
+            .ad300_250{
+                border:2px solid red;
+                width: 296px;
+                overflow: hidden; 
+            }
+            .ad300_250 .ad-logo{
+                height:75px;
+            }
+            .ad300_250 .good-list-wrap{
+                width:224px;
+                height:171px;
+                overflow:hidden;
+                position:relative;
+                float:left;
+            }
+            .ad300_250 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad300_250 .good{
+                overflow: hidden;
+                float:left;
+                width:105px;
+                margin-right:14px;
+                position:relative;
+                margin-top:5px;
+                margin-bottom:6px;
+            }
+            .ad300_250 .last-good{
+            }
+            .ad300_250 .good-image{
+                position:relative;
+                width:105px;
+                height:87px;
+            }
+            .ad300_250 .good-image img{
+                width: 85px;
+                height: 85px;
+                padding:0px 8px;
+                border:1px solid #ccc;
+                display: block;
+            }
+            .ad300_250 .good-buy{
+                display:block;
+                font-size:12px;
+                line-height:22px;
+                text-align: center;
+                color:#fff;
+                margin:0px 20px;
+            }
+            .ad300_250 .good-old-price{
+                font-size:12px;
+                font-style:italic;
+                line-height: 18px;
+                display:none;
+            }
+            .ad300_250 .good-price{
+                position:absolute;
+                bottom:0px;
+                left:0px;
+                width:97px;
+                padding:0px 3px;
+                font-size:15px;
+                text-align: right;
+                font-weight: bold;
+                line-height: 15px;
+                background:#000;
+                opacity:.7;
+                filter:alpha(opacity=70);
+                text-decoration:line-through;
+            }
+            .ad300_250 .good-tip{
+                border-radius:99px;
+                color:#fff;
+                width:22px;
+                height:22px;
+                position:absolute;
+                left:0px;
+                top:6px;
+                font-size: 10px;
+                line-height: 22px;
+                font-style: italic;
+                display:none;
+            }
+            .ad300_250 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                margin:5px 0px;
+            }
+            .ad300_250 .btn{
+                position: relative;
+                height:171px;
+                width:34px;
+            }
+            .ad300_250 .bg{
+                top:75px;
+            }
+            .ad300_250 .front{
+                top:75px;
+            }
+            .brand-icon{
+                position:absolute;
+                right:0px;
+                bottom:0px;
+            }
+
+
+
+
+            /* 240_200 */
+            .ad240_200{
+                border:2px solid red;
+                width: 236px;
+                overflow: hidden;
+                background-color: #fff;
+            }
+            .ad240_200 .ad-logo{
+                height:60px;
+            }
+            .ad240_200 .ad_pageBtn{
+                margin: 115px 0px 0px 35px;
+                position:relative;
+            }
+            .ad240_200 .good-list-wrap{
+                width: 226px;
+                height: 120px;
+                overflow: hidden;
+                position: relative;
+                float: left;
+                margin-left: 5px;
+            }
+            .ad240_200 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad240_200 .good{
+                overflow: hidden;
+                float:left;
+                width:228px;
+                margin-right:5px;
+                position:relative;
+                margin-top:5px;
+            }
+            .ad240_200 .last-good{
+            }
+            .ad240_200 .good-image{
+                position: relative;
+                width: 105px;
+                height: 105px;
+                float: left;
+            }
+            .ad240_200 .good-image img{
+                width: 105px;
+                height: 105px;
+                padding:0px 5px;
+                display: block;
+                border: none;
+            }
+            .ad240_200 .good-buy{
+                display: block;
+                font-size: 12px;
+                line-height: 20px;
+                text-align: center;
+                color: #fff;
+                margin: 15px 0px 0px 115px;
+            }
+            .ad240_200 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                word-break: break-all;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                margin: 5px 0px 0px 115px;
+            }
+            .ad240_200 .bg{
+                top:60px;
+            }
+            .ad240_200 .good-price{
+                font-size: 15px;
+                font-weight: 600;
+                margin: 5px 0px 0px 115px;
+                text-decoration:line-through;
+            }
+            .ad240_200 .front{
+                top:60px;
+            }
+
+
+
+            /* 240_170 */
+            .ad240_170{
+                border:2px solid red;
+                width: 236px;
+                overflow: hidden;
+            }
+            .ad240_170 .ad-logo{
+                height:40px;
+            }
+            .ad240_170 .ad_pageBtn{
+                margin: 115px 0px 0px 25px;
+                position: relative;
+            }
+            .ad240_170 .good-list-wrap{
+                width: 226px;
+                height: 106px;
+                overflow: hidden;
+                position: relative;
+                float: left;
+            }
+            .ad240_170 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad240_170 .good{
+                overflow: hidden;
+                float:left;
+                width:228px;
+                margin-right:5px;
+                position:relative;
+                margin-top:5px;
+                margin-bottom:6px;
+            }
+            .ad240_170 .last-good{
+            }
+            .ad240_170 .good-image{
+                position: relative;
+                width: 96px;
+                height: 96px;
+                float: left;
+            }
+            .ad240_170 .good-image img{
+                width: 96px;
+                height: 96px;
+                padding:0px 5px;
+                display: block;
+                border: none;
+            }
+            .ad240_170 .good-buy{
+                display: block;
+                font-size: 12px;
+                line-height: 20px;
+                text-align: center;
+                color: #fff;
+                margin: 14px 0px 0px 115px;
+            }
+            .ad240_170 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                word-break: break-all;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                margin: 5px 0px 0px 115px;
+            }
+            .ad240_170 .bg{
+                top:60px;
+            }
+            .ad240_170 .good-price{
+                font-size: 15px;
+                font-weight: 600;
+                margin: 10px 0px 0px 20px;
+                width: 50px;
+                float: left;
+                text-decoration:line-through;
+            }
+            .ad240_170 .good-sales{
+                display: block;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+                color: #fff;
+                background-color: #fe5000;
+                margin: 10px 0px 0px 180px;
+                width: 45px;
+            }
+            .ad240_170 .front{
+                top:60px;
+            }
+            .ad240_170 .maskCircle{
+                margin: 0px 4px 4px;
+            }
+
+
+            /* 640_90 */
+            .ad640_90{
+                border:2px solid red;
+                width: 636px;
+                overflow: hidden;
+                background-color: #fff;
+            }
+            .ad640_90 .ad-logo{
+                width: 116px;
+                height:86px;
+                float: left;
+            }
+            .ad640_90 .good-list-wrap{
+                width: 500px;
+                height: 86px;
+                overflow: hidden;
+                position: relative;
+                float: left;
+            }
+            .ad640_90 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad640_90 .good{
+                overflow: hidden;
+                position:relative;
+                float:left;
+            }
+            .ad640_90 .last-good{
+            }
+            .ad640_90 .good-image{
+                position: relative;
+                width: 86px;
+                height: 86px;
+                float: left;
+            }
+            .ad640_90 .good-image img{
+                width: 86px;
+                height: 86px;
+                padding:0px 5px;
+                display: block;
+                border: none;
+            }
+            .ad640_90 .good-buy{
+                display: block;
+                font-size: 12px;
+                line-height: 18px;
+                text-align: center;
+                color: #fff;
+                margin-top: 18px;
+                width: 60px;
+                float: left;
+            }
+            .ad640_90 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                width: 140px;
+                word-break: break-all;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                margin: 7px 0px 0px 5px;
+                
+            }
+            .ad640_90 .good-price{
+                font-size: 15px;
+                font-weight: 600;
+                margin: 18px 0px 0px 10px;
+                width: 70px;
+                float: left;
+                text-decoration:line-through;
+            }
+            .ad640_90 .rightContent{
+                float: left;
+                transition: 0.5s;
+            }
+            .ad640_90 .bg{
+                top:60px;
+            }
+            .ad640_90 .front{
+                top:60px;
+            }
+            .ad640_90 .ad_pageBtn{
+                width: 20px;
+                height: 46px;
+                margin: 20px 0px 0px 616px;
+            }
+            .ad640_90 .circle{
+                margin: 0px 4px 8px;
+            }
+            .ad640_90 .maskCircle{
+                margin: 0px 4px 4px;
+                position: absolute;
+            }
+
+
+
+
+
+            /**950_90**/
+            .ad950_90{
+                border:2px solid red;
+                width: 946px;
+                overflow:hidden;
+                background-color: #fff;
+            }
+            .ad950_90 .ad-logo{
+                width:178px;
+                height:86px;
+                float:left;
+            }
+            .ad950_90 .good-list-wrap{
+                width:700px;
+                height:86px;
+                overflow:hidden;
+                position:relative;
+                float:left;
+            }
+            .ad950_90 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad950_90 .good{
+                overflow: hidden;
+                float:left;
+                width:226px;
+                margin-right:5px;
+                position:relative;
+            }
+            .ad950_90 .last-good{
+            }
+
+            .ad950_90 .good-image{
+                float: left;
+                margin-right:10px;
+            }
+            .ad950_90 .good-image img{
+                width: 86px;
+                height: 86px;
+                display: block;
+                border: none;
+            }
+            .ad950_90 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                margin-top:10px;
+                word-break:break-all;
+                word-wrap:break-word;
+                white-space:pre-wrap;
+            }
+            .ad950_90 .good-tip{
+                border-radius:99px;
+                color:#fff;
+                width:22px;
+                height:22px;
+                position:absolute;
+                left:0px;
+                top:6px;
+                font-size: 10px;
+                line-height: 22px;
+                font-style: italic;
+                display:none;
+            }
+            .ad950_90 .good-buy{
+                display:block;
+                position:absolute;
+                right:0px;
+                bottom:6px;
+                font-size:12px;
+                line-height:22px;
+                padding:0px 5px;
+                text-align: center;
+                color:#fff;
+            }
+            .ad950_90 .good-old-price{
+                font-size:12px;
+                font-style:italic;
+                line-height: 18px;
+                visibility:hidden;
+            }
+            .ad950_90 .good-price{
+                font-size:15px;
+                font-style:italic;
+                font-weight: bold;
+                line-height: 18px;
+                text-decoration:line-through;
+            }
+            .ad950_90 .btn{
+                position: relative;
+                height:86px;
+                width:34px;
+            }
+            .ad950_90 .left-btn{
+                float:left;
+            }
+            .ad950_90 .right-btn{
+                float:right;
+            }
+
+
+
+
+            /**1000_300**/
+            .ad1000_300{
+                border:2px solid red;
+                width: 996px;
+                overflow:hidden;
+                background-color: #fff;
+            }
+            .ad1000_300 .ad-logo{
+                width:102px;
+                height:296px;
+                float:left;
+            }
+            .ad1000_300 .good-list-wrap{
+                width:826px;
+                height:286px;
+                overflow:hidden;
+                position:relative;
+                margin: 8px 0px 0px;
+                float:left;
+            }
+            .ad1000_300 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad1000_300 .good{
+                overflow: hidden;
+                float: left;
+                width: 202px;
+                margin-right: 5px;
+                position: relative;
+            }
+            .ad1000_300 .last-good{
+            }
+
+            .ad1000_300 .good-image{
+            }
+            .ad1000_300 .good-image img{
+                width: 200px;
+                height: 200px;
+                display: block;
+                border: none;
+            }
+            .ad1000_300 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                margin-top:10px;
+                word-break:break-all;
+                word-wrap:break-word;
+                white-space:pre-wrap;
+            }
+            .ad1000_300 .good-tip{
+                border-radius:99px;
+                color:#fff;
+                width:22px;
+                height:22px;
+                position:absolute;
+                top:6px;
+                font-size: 10px;
+                line-height: 22px;
+                font-style: italic;
+                display:none;
+            }
+            .ad1000_300 .good-buy{
+                display:block;
+                position:absolute;
+                right:5px;
+                bottom:3px;
+                font-size:12px;
+                line-height:22px;
+                padding:0px 5px;
+                text-align: center;
+                color:#fff;
+            }
+            .ad1000_300 .good-old-price{
+                font-size:12px;
+                font-style:italic;
+                line-height: 18px;
+                visibility:hidden;
+            }
+            .ad1000_300 .good-price{
+                font-size:15px;
+                font-style:italic;
+                font-weight: bold;
+                line-height: 18px;
+                text-decoration:line-through;
+            }
+            .ad1000_300 .btn{
+                position: relative;
+                height:296px;
+                width:33px;
+            }
+            .ad1000_300 .left-btn{
+                float:left;
+            }
+            .ad1000_300 .right-btn{
+                float:right;
+            }
+            .ad1000_300 .front{
+                top:138px;
+            }
+            .ad1000_300 .bg{
+                top:138px;
+            }
+
+
+
+
+            /**200_300**/
+            .ad200_300{
+                border:2px solid red;
+                width: 196px;
+                overflow:hidden;
+            }
+            .ad200_300 .ad-logo{
+                width:196px;
+                height:50px;
+            }
+            .ad200_300 .good-list-wrap{
+                width:196px;
+                height:196px;
+                overflow:hidden;
+                position:relative;
+            }
+            .ad200_300 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad200_300 .good{
+                overflow: hidden;
+                position:relative;
+                width:196px;
+                float:left;
+            }
+            .ad200_300 .last-good{
+            }
+            .ad200_300 .good-image{
+            }
+            .ad200_300 .good-image img{
+                width: 196px;
+                height: 196px;
+                display: block;
+                border:none;
+            }
+            .ad200_300 .good-title{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                word-break: break-all;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                position: absolute;
+                bottom: 28px;
+                left: 5px;
+            }
+            .ad200_300 .good-price{
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 186px;
+                font-size: 15px;
+                color: #fff;
+                text-align: right;
+                font-weight: bold;
+                font-style: italic;
+                line-height: 80px;
+                background: #000;
+                opacity: .4;
+                filter:alpha(opacity=40);
+                height: 60px;
+                padding-right: 10px;
+                padding-top: 10px;
+                text-decoration:line-through;
+            }
+            .ad200_300 .btn{
+                position: relative;
+                height:296px;
+                width:34px;
+            }
+            .ad200_300 .icoList{
+                
+            }
+
+
+
+
+            /**300_500**/
+            .ad300_500{
+                border:2px solid red;
+                width: 296px;
+                overflow:hidden;
+                background-color: #f4f4f4;
+            }
+            .ad300_500 .ad-logo{
+                width:296px;
+                height:86px;
+            }
+            .ad300_500 .good-list-wrap{
+                width:296px;
+                height:351px;
+                overflow:hidden;
+                position:relative;
+            }
+            .ad300_500 .good-list{
+                overflow:hidden;
+                position:absolute;
+                top:0px;
+                left:0px;
+                -webkit-transition:left 1s ease-out;
+                -ms-transition:left 1s ease-out;
+                -moz-transition:left 1s ease-out;
+                -o-transition:left 1s ease-out;
+                transition:left 1s ease-out;
+            }
+            .ad300_500 .good{
+                overflow: hidden;
+                position:relative;
+                width:296px;
+                float:left;
+            }
+            .ad300_500 .last-good{
+            }
+            .ad300_500 .good-image{
+            }
+            .ad300_500 .good-image img{
+                width: 250px;
+                height: 250px;
+                display: block;
+                margin: 15px 23px 0px 23px;
+                border:none;
+            }
+            .ad300_500 .good-title{
+                line-height: 18px;
+                font-size: 15px;
+                font-weight: 600;
+                overflow: hidden;
+                height: 36px;
+                margin: 10px 23px 0px 23px;
+                word-break:break-all;
+                word-wrap:break-word;
+                white-space:pre-wrap;
+            }
+            .ad300_500 .good-price{
+                line-height: 22px;
+                font-size: 15px;
+                font-style: italic;
+                font-weight: bold;
+                margin: 5px 23px 0px 23px;
+                text-decoration:line-through;
+            }
+            .ad300_500 .btn{
+                position: relative;
+                height:296px;
+                width:34px;
+            }
+            .ad300_500 .icoList{
+                
+            }
+            .ad300_500 .icoList_image img{
+                margin-bottom: 10px;
+            }
+
+
+
+
+            /**公用css**/
+            .circle{
+                width:6px;
+                height:6px;
+                border-radius:5px;
+                background-color: #BFBFBF;
+                /* border:1px solid #8A8A8A; */
+                display: block;
+                float: left;
+                margin: 0px 4px 4px;
+            }
+            .maskCircle{
+                width: 6px;
+                height: 6px;
+                border-radius:5px;
+                background-color: #BFBFBF;
+                /* border:1px solid #8A8A8A; */
+                display: block;
+                opacity: 0;
+                filter:alpha(opacity=0);
+                position: absolute;
+                margin: 5px 4px 4px;
+                top:0px;
+            }
+            .icoMask{
+                width: 49px;
+                height: 49px;
+                display: block;
+                background: #fff;
+                opacity: .6;
+                filter:alpha(opacity:60);
+                float: left;
+                position: absolute;
+                margin-left: 2px;
+            }
+            .icoList_image img{
+                width: 49px;
+                height: 49px;
+                display: block;
+                float: left;
+            }
+        </style>
+        <script>
+            var AceTemplate = AceTemplate || {};
+            (function(){
+                /**
+                 * Ace Engine Template
+                 * 一套基于HTML和JS语法自由穿插的模板系统
+                 * http://code.google.com/p/ace-engine/wiki/AceTemplate
+                 * @author 王集鹄(wangjihu，http://weibo.com/zswang) 鲁亚然(luyaran，http://weibo.com/zinkey)
+                 * @version 2011-07-06 
+                  * @copyright (c) 2011, Baidu Inc, All rights reserved.
+                 */
+             
+                /* Debug Start */
+                var logger = {
+                    /**
+                     * 打印日志
+                     * @param {Object} text 日志文本
+                     */
+                    log: function(text) {
+                        /*
+                        var dom = document.getElementById("log");
+                        if (dom) {
+                            dom.value += text + "\n";
+                        }
+                        */
+                        window.console && console.log(text)
+                    }
+                };
+                /* Debug End */
+                
+                var htmlDecodeDict = { "quot": '"', "lt": "<", "gt": ">", "amp": "&", "nbsp": " " };
+                var htmlEncodeDict = { '"': "quot", "<": "lt", ">": "gt", "&": "amp", " ": "nbsp" };
+                var lib = {
+                    /**
+                     * 通过id获得DOM对象
+                     * @param {String} id
+                     */
+                    g: function(id){
+                        if (typeof id != "string") 
+                            return id;
+                        return document.getElementById(id);
+                    },
+                    /**
+                     * HTML解码
+                     * @param {String} html
+                     */
+                    decodeHTML: function(html) {
+                        return String(html).replace(/&(quot|lt|gt|amp|nbsp);/ig, function(all, key) {
+                            return htmlDecodeDict[key];
+                        }).replace(/&#u([a-f\d]{4});/ig, function(all, hex) {
+                            return String.fromCharCode(parseInt("0x" + hex));
+                        }).replace(/&#(\d+);/ig, function(all, number) {
+                            return String.fromCharCode(+number);
+                        });
+                    },
+                    
+                    /**
+                     * HTML编码
+                     * @param {String} html 
+                     */
+                    encodeHTML: function(html) {
+                        return String(html).replace(/["<>& ]/g, function(all) {
+                            return "&" + htmlEncodeDict[all] + ";";
+                        });
+                    },
+                    /**
+                     * 获得元素文本
+                     * @param {Element} element
+                     */
+                    elementText: function(element) {
+                        if (!element || !element.tagName) return "";
+                        if (/^(input|textarea)$/i.test(element.tagName))
+                            return element.value;
+                        return lib.decodeHTML(element.innerHTML);
+                    }
+                };
+                
+                /**
+                 * 解析器缓存
+                 */
+                var readerCaches = {};
+                
+                /**
+                 * 是否注册了所有模板
+                 */
+                var registerAll = false;
+             
+                /**
+                 * 构造模板的处理函数
+                 * 不是JS块的规则
+                 *     非主流字符开头
+                 *         示例：汉字、#{value}、<div>
+                 *         正则：/^\s*[<>!#^&\u0000-\u0008\u007F-\uffff].*$/mg
+                 *     html标记结束，如：
+                 *         示例：>、src="1.gif" />
+                 *         正则：/^.*[<>]\s*$/mg
+                 *     没有“双引号、单引号、分号、逗号，大小括号”，不是else等单行语句、如：
+                 *         示例：hello world
+                 *         正则：/^(?!\s*(else|do|try|finally)\s*$)[^'":;,\[\]{}()\n\/]+$/mg
+                 *     属性表达式
+                 *         示例：a="12" b="45"、a='ab' b="cd"
+                 *         正则：/^(\s*(([\w-]+\s*=\s*"[^"]*")|([\w-]+\s*=\s*'[^']*')))+\s*$/mg
+                 *     样式表达式
+                 *         示例：div.focus{color: #fff;}、#btnAdd span{}
+                 *         正则：/^\s*([.#][\w-.]+(:\w+)?(\s*|,))*(?!(else|do|while|try|return)\b)[.#]?[\w-.*]+(:\w+)?\s*\{.*$/mg
+                 * @param {String} template 模板字符
+                 */
+                function analyse(template) {
+                    var body = [], processItem = [];
+                    body.push("with(this){");
+                    body.push(template
+                        .replace(/[\r\n]+/g, "\n") // 去掉多余的换行，并且去掉IE中困扰人的\r
+                        .replace(/^\n+|\s+$/mg, "") // 去掉空行，首部空行，尾部空白
+                        .replace(/((^\s*[<>!#^&\u0000-\u0008\u007F-\uffff].*$|^.*[<>]\s*$|^(?!\s*(else|do|try|finally)\s*$)[^'":;,\[\]{}()\n\/]+$|^(\s*(([\w-]+\s*=\s*"[^"]*")|([\w-]+\s*=\s*'[^']*')))+\s*$|^\s*([.#][\w-.]+(:\w+)?(\s*|,))*(?!(else|do|while|try|return)\b)[.#]?[\w-.*]+(:\w+)?\s*\{.*$)\s?)+/mg, function(expression) { // 输出原文
+                            expression = ['"', expression
+                                .replace(/&none;/g, "") // 空字符
+                                .replace(/["'\\]/g, "\\$&") // 处理转义符
+                                .replace(/\n/g, "\\n") // 处理回车转义符
+                                .replace(/(!?#)\{(.*?)\}/g, function (all, flag, template) { // 变量替换
+                                    template = template.replace(/\\n/g, "\n").replace(/\\([\\'"])/g, "$1"); // 还原转义
+                                    var identifier = /^[a-z$][\w+$]+$/i.test(template) &&
+                                        !(/^(true|false|NaN|null|this)$/.test(template)); // 单纯变量，加一个未定义保护
+                                    return ['",', 
+                                        identifier ? ['typeof ', template, '=="undefined"?"":'].join("") : "", 
+                                        (flag == "#" ? '_encode_' : ""), 
+                                        '(', template, '),"'].join("");
+                                }), '"'].join("").replace(/^"",|,""$/g, "");
+                            if (expression)    
+                                return ['_output_.push(', expression, ');'].join("");
+                            else return "";
+                        }));
+                    body.push("}");
+                    var result = new Function("_output_", "_encode_", "helper", body.join(""));
+                    /* Debug Start */
+                    //logger.log(String(result));
+                    /* Debug End */
+                    return result;
+                }
+             
+                /**
+                 * 格式化输出
+                 * @param {String|Element} id 模板ID或是模板本身(非标识符将识别为模板本身)
+                 * @param {Object} data 格式化的数据，默认为空字符串
+                 * @param {Object} helper 附加数据(默认为模板对象)
+                 */
+                AceTemplate.format = function(id, data, helper) {
+                    if (!id) return "";
+                    var reader, element;
+                    if (typeof id == "object" && id.tagName) { // 如果是Dom对象
+                        element = id;
+                        id = element.getAttribute("id");
+                    }
+                    helper = helper || this; // 默认附加数据
+                    reader = readerCaches[id]; // 优先读取缓存
+                    if (!reader) { // 缓存中未出现
+                        if (!/[^\w-]/.test(id)) { // 合法的标识符按id读取
+                            if (!element) {
+                                element = lib.g(id);
+                            }
+                            reader = this.register(id, element);
+                        } else {
+                            reader = analyse(id);
+                        }
+                    }
+                    var output = [];
+                    reader.call(data || "", output, lib.encodeHTML, helper);
+                    return output.join("");
+                };
+                
+                /**
+                 * 注册模板，如果没有参数则是注册所有script标签模板
+                 * @param {String} id 模板ID
+                 * @param {Element|String} target 模板对象或者是模板字符串，如果没有则默认获取id对应的DOM对象
+                 */
+                AceTemplate.register = function(id, target) {
+                    if (!arguments.length && !registerAll) { // 无参数并且没有注册过
+                        registerAll = true;
+                        var scripts = document.getElementsByTagName("script");
+                        for (var i = 0; i < scripts.length; i++) {
+                            var script = scripts[i];
+                            if (/^(text\/template)$/i.test(script.getAttribute("type"))) {
+                                var id = script.getAttribute("id");
+                                id && arguments.callee.call(this, id, script);
+                            }
+                        }
+                    }
+                    if (!id) return;
+                    if (readerCaches[id]) { // 如果已经注册
+                        return readerCaches[id];
+                    }
+                    if (typeof target != "string") {
+                        if (typeof target == "undefined") {
+                            target = lib.g(id);
+                        }
+                        target = lib.elementText(target);
+                    }
+                    return readerCaches[id] = analyse(target);
+                };
+                
+                /**
+                 * 注销模板
+                 * @param {String} id 模板ID
+                 */
+                AceTemplate.unregister = function(id) {
+                    delete readerCaches[id];
+                };
+            })();
+        </script>
+        <script>
+            var baseColor = {
+                'hong' : {
+                    logoBgColor:   '#ac1521', //logo背景颜色,
+                    borderColor:   '#ac1521', //边框颜色,
+                    priceColor:    '#ac1521', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a'  //描述文本颜色
+                },
+                'huang' : {
+                    logoBgColor:   '#ffaa00', //logo背景颜色,
+                    borderColor:   '#ffaa00', //边框颜色,
+                    priceColor:    '#fe5000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a'  //描述文本颜色
+                },
+                'lan' : {
+                    logoBgColor:   '#0088f0', //logo背景颜色,
+                    borderColor:   '#0088f0', //边框颜色,
+                    priceColor:    '#fe5000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a' //描述文本颜色
+                },
+                'lv' : {
+                    logoBgColor:   '#42ac3a', //logo背景颜色,
+                    borderColor:   '#42ac3a', //边框颜色,
+                    priceColor:    '#fe5000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a'  //描述文本颜色
+                },
+                'he' : {
+                    logoBgColor:   '#6b4c3e', //logo背景颜色,
+                    borderColor:   '#6b4c3e', //边框颜色,
+                    priceColor:    '#ac1521', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a'  //描述文本颜色
+                },
+                'hei' : {
+                    logoBgColor:   '#343434', //logo背景颜色,
+                    borderColor:   '#343434', //边框颜色,
+                    priceColor:    '#ac1521', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a'  //描述文本颜色
+                },
+                'zi' : {
+                    logoBgColor:   '#9469a8', //logo背景颜色,
+                    borderColor:   '#9469a8', //边框颜色,
+                    priceColor:    '#ff6000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ff6000', //折扣颜色
+                    buyColor:      '#ff6000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a'  //描述文本颜色
+                }
+            };
+
+            /**
+            * 配置一个颜色名模版
+            * @param    type             颜色类型
+            * @param    w                宽
+            * @param    h                高
+            * @param    pageWidth        子页面宽度
+            * @param    templateName     模版名称
+            * @param    logo             logo地址
+            * @param    num              广告个数
+            **/
+            function getTemplate_config_map (type,w,h,pageWidth,templateName,logo,num) {
+                var tempMap = {};
+                var colors = baseColor[type];
+                tempMap['w'] = w;
+                tempMap['h'] = h;
+                tempMap['pageWidth'] = pageWidth;
+                tempMap['templateName'] = templateName;
+                tempMap['logo'] = logo;
+                tempMap['goodsNum'] = num;
+                for(key in colors){
+                    tempMap[key] = colors[key];
+                }
+                return tempMap;
+            }
+
+            var TEMPLATE_CONFIG_MAP = {
+                /*
+                    {
+                        logoBgColor:   '#ac1521', //logo背景颜色,
+                        borderColor:   '#ac1521', //边框颜色,
+                        priceColor:    '#ac1521' //现价颜色
+                        oldPriceColor: '#b1b1b1', //原价颜色
+                        tipColor:      '#ac1521', //折扣颜色
+                        buyColor:      '#ac1521', //购买按钮颜色
+                        titleColor:    '#3a3a3a', //标题颜色
+                        descColor:     '#3a3a3a', //描述文本颜色
+                    }
+                 */
+                
+                //红
+                "1000_90_hong": {
+                    w: 1000,
+                    h: 90,
+                    templateName: 'fyrTpl_1000_90',
+                    pageWidth: 768,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_190_86.png',
+                    logoBgColor:   '#ac1521', //logo背景颜色,
+                    borderColor:   '#ac1521', //边框颜色,
+                    priceColor:    '#ac1521', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //黄
+                "1000_90_huang": {
+                    w: 1000,
+                    h: 90,
+                    templateName: 'fyrTpl_1000_90',
+                    pageWidth: 768,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_190_86.png',
+                    logoBgColor:   '#ffaa00', //logo背景颜色,
+                    borderColor:   '#ffaa00', //边框颜色,
+                    priceColor:    '#fe5000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //蓝
+                "1000_90_lan": {
+                    w: 1000,
+                    h: 90,
+                    templateName: 'fyrTpl_1000_90',
+                    pageWidth: 768,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_190_86.png',
+                    logoBgColor:   '#0088f0', //logo背景颜色,
+                    borderColor:   '#0088f0', //边框颜色,
+                    priceColor:    '#fe5000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a', //描述文本颜色
+                    goodsNum: 6
+                },
+                //绿
+                "1000_90_lv": {
+                    w: 1000,
+                    h: 90,
+                    templateName: 'fyrTpl_1000_90',
+                    pageWidth: 768,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_190_86.png',
+                    logoBgColor:   '#42ac3a', //logo背景颜色,
+                    borderColor:   '#42ac3a', //边框颜色,
+                    priceColor:    '#fe5000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //褐
+                "1000_90_he": {
+                    w: 1000,
+                    h: 90,
+                    templateName: 'fyrTpl_1000_90',
+                    pageWidth: 768,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_190_86.png',
+                    logoBgColor:   '#6b4c3e', //logo背景颜色,
+                    borderColor:   '#6b4c3e', //边框颜色,
+                    priceColor:    '#ac1521', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //黑
+                "1000_90_hei": {
+                    w: 1000,
+                    h: 90,
+                    templateName: 'fyrTpl_1000_90',
+                    pageWidth: 768,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_190_86.png',
+                    logoBgColor:   '#343434', //logo背景颜色,
+                    borderColor:   '#343434', //边框颜色,
+                    priceColor:    '#ac1521', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //紫
+                "1000_90_zi": {
+                    w: 1000,
+                    h: 90,
+                    templateName: 'fyrTpl_1000_90',
+                    pageWidth: 768,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_190_86.png',
+                    logoBgColor:   '#9469a8', //logo背景颜色,
+                    borderColor:   '#9469a8', //边框颜色,
+                    priceColor:    '#ff6000', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ff6000', //折扣颜色
+                    buyColor:      '#ff6000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+
+                /**
+                 * 300*250
+                 */
+
+                //红
+                "300_250_hong": {
+                    w: 300,
+                    h: 250,
+                    templateName: 'fyrTpl_300_250',
+                    pageWidth: 238,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_296_75.png',
+                    logoBgColor:   '#ac1521', //logo背景颜色,
+                    borderColor:   '#ac1521', //边框颜色,
+                    priceColor:    '#ffffff', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //黄
+                "300_250_huang": {
+                    w: 300,
+                    h: 250,
+                    templateName: 'fyrTpl_300_250',
+                    pageWidth: 238,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_296_75.png',
+                    logoBgColor:   '#ffaa00', //logo背景颜色,
+                    borderColor:   '#ffaa00', //边框颜色,
+                    priceColor:    '#ffffff', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //蓝
+                "300_250_lan": {
+                    w: 300,
+                    h: 250,
+                    templateName: 'fyrTpl_300_250',
+                    pageWidth: 238,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_296_75.png',
+                    logoBgColor:   '#0088f0', //logo背景颜色,
+                    borderColor:   '#0088f0', //边框颜色,
+                    priceColor:    '#ffffff', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //绿
+                "300_250_lv": {
+                    w: 300,
+                    h: 250,
+                    templateName: 'fyrTpl_300_250',
+                    pageWidth: 238,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_296_75.png',
+                    logoBgColor:   '#42ac3a', //logo背景颜色,
+                    borderColor:   '#42ac3a', //边框颜色,
+                    priceColor:    '#ffffff', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#fe5000', //折扣颜色
+                    buyColor:      '#fe5000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //褐
+                "300_250_he": {
+                    w: 300,
+                    h: 250,
+                    templateName: 'fyrTpl_300_250',
+                    pageWidth: 238,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_296_75.png',
+                    logoBgColor:   '#6b4c3e', //logo背景颜色,
+                    borderColor:   '#6b4c3e', //边框颜色,
+                    priceColor:    '#ffffff', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+
+                //黑
+                "300_250_hei": {
+                    w: 300,
+                    h: 250,
+                    templateName: 'fyrTpl_300_250',
+                    pageWidth: 238,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_296_75.png',
+                    logoBgColor:   '#343434', //logo背景颜色,
+                    borderColor:   '#343434', //边框颜色,
+                    priceColor:    '#ffffff', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ac1521', //折扣颜色
+                    buyColor:      '#ac1521', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+                //紫
+                "300_250_zi": {
+                    w: 300,
+                    h: 250,
+                    templateName: 'fyrTpl_300_250',
+                    pageWidth: 238,
+                    logo: 'http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_296_75.png',
+                    logoBgColor:   '#9469a8', //logo背景颜色,
+                    borderColor:   '#9469a8', //边框颜色,
+                    priceColor:    '#ffffff', //现价颜色
+                    oldPriceColor: '#b1b1b1', //原价颜色
+                    tipColor:      '#ff6000', //折扣颜色
+                    buyColor:      '#ff6000', //购买按钮颜色
+                    titleColor:    '#3a3a3a', //标题颜色
+                    descColor:     '#3a3a3a',  //描述文本颜色
+                    goodsNum: 6
+                },
+
+
+
+
+                /**
+                 * 240*200
+                 */
+                //红
+                "240_200_hong": getTemplate_config_map ("hong",
+                                                        240,200,233,
+                                                        "fyrTpl_240_200",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //黄
+                "240_200_huang": getTemplate_config_map ("huang",
+                                                        240,200,233,
+                                                        "fyrTpl_240_200",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //蓝
+                "240_200_lan": getTemplate_config_map ("lan",
+                                                        240,200,233,
+                                                        "fyrTpl_240_200",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //绿
+                "240_200_lv": getTemplate_config_map ("lv",
+                                                        240,200,233,
+                                                        "fyrTpl_240_200",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //褐
+                "240_200_he": getTemplate_config_map ("he",
+                                                        240,200,233,
+                                                        "fyrTpl_240_200",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+
+                //黑
+                "240_200_hei": getTemplate_config_map ("hei",
+                                                        240,200,233,
+                                                        "fyrTpl_240_200",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //紫
+                "240_200_zi": getTemplate_config_map ("zi",
+                                                        240,200,233,
+                                                        "fyrTpl_240_200",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+
+
+                /**
+                 * 240*170
+                 */
+                 //红
+                "240_170_hong": getTemplate_config_map ("hong",
+                                                        240,170,233,
+                                                        "fyrTpl_240_170",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //黄
+                "240_170_huang": getTemplate_config_map ("huang",
+                                                        240,170,233,
+                                                        "fyrTpl_240_170",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //蓝
+                "240_170_lan": getTemplate_config_map ("lan",
+                                                        240,170,233,
+                                                        "fyrTpl_240_170",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //绿
+                "240_170_lv": getTemplate_config_map ("lv",
+                                                        240,170,233,
+                                                        "fyrTpl_240_170",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                "240_170_he": getTemplate_config_map ("he",
+                                                        240,170,233,
+                                                        "fyrTpl_240_170",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //黑
+                "240_170_hei": getTemplate_config_map ("hei",
+                                                        240,170,233,
+                                                        "fyrTpl_240_170",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+                //紫
+                "240_170_zi": getTemplate_config_map ("zi",
+                                                        240,170,233,
+                                                        "fyrTpl_240_170",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_238_60.png",
+                                                        4),
+
+
+
+                /**
+                 * 640*90
+                 */
+                 //红
+                "640_90_hong": getTemplate_config_map ("hong",
+                                                        640,90,504,
+                                                        "fyrTpl_640_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_116_90.png",
+                                                        4),
+                //黄
+                "640_90_huang": getTemplate_config_map ("huang",
+                                                        640,90,504,
+                                                        "fyrTpl_640_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_116_90.png",
+                                                        4),
+                //蓝
+                "640_90_lan": getTemplate_config_map ("lan",
+                                                        640,90,504,
+                                                        "fyrTpl_640_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_116_90.png",
+                                                        4),
+                //绿
+                "640_90_lv": getTemplate_config_map ("lv",
+                                                        640,90,504,
+                                                        "fyrTpl_640_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_116_90.png",
+                                                        4),
+                "640_90_he": getTemplate_config_map ("he",
+                                                        640,90,504,
+                                                        "fyrTpl_640_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_116_90.png",
+                                                        4),
+                //黑
+                "640_90_hei": getTemplate_config_map ("hei",
+                                                        640,90,504,
+                                                        "fyrTpl_640_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_116_90.png",
+                                                        4),
+                //紫
+                "640_90_zi": getTemplate_config_map ("zi",
+                                                        640,90,504,
+                                                        "fyrTpl_640_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_116_90.png",
+                                                        4),
+
+
+
+                /**
+                 * 950*90
+                 */
+                 //红
+                "950_90_hong": getTemplate_config_map ("hong",
+                                                        950,90,702,
+                                                        "fyrTpl_950_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //黄
+                "950_90_huang": getTemplate_config_map ("huang",
+                                                        950,90,702,
+                                                        "fyrTpl_950_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //蓝
+                "950_90_lan": getTemplate_config_map ("lan",
+                                                        950,90,702,
+                                                        "fyrTpl_950_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //绿
+                "950_90_lv": getTemplate_config_map ("lv",
+                                                        950,90,702,
+                                                        "fyrTpl_950_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                "950_90_he": getTemplate_config_map ("he",
+                                                        950,90,702,
+                                                        "fyrTpl_950_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //黑
+                "950_90_hei": getTemplate_config_map ("hei",
+                                                        950,90,702,
+                                                        "fyrTpl_950_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //紫
+                "950_90_zi": getTemplate_config_map ("zi",
+                                                        950,90,702,
+                                                        "fyrTpl_950_90",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+
+
+
+
+                /**
+                 * 1000*300
+                 */
+                 //红
+                "1000_300_hong": getTemplate_config_map ("hong",
+                                                        1000,300,828,
+                                                        "fyrTpl_1000_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_1000_300.png",
+                                                        8),
+                //黄
+                "1000_300_huang": getTemplate_config_map ("huang",
+                                                        1000,300,828,
+                                                        "fyrTpl_1000_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_1000_300.png",
+                                                        8),
+                //蓝
+                "1000_300_lan": getTemplate_config_map ("lan",
+                                                        1000,300,828,
+                                                        "fyrTpl_1000_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_1000_300.png",
+                                                        8),
+                //绿
+                "1000_300_lv": getTemplate_config_map ("lv",
+                                                        1000,300,828,
+                                                        "fyrTpl_1000_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_1000_300.png",
+                                                        8),
+                "1000_300_he": getTemplate_config_map ("he",
+                                                        1000,300,828,
+                                                        "fyrTpl_1000_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_1000_300.png",
+                                                        8),
+                //黑
+                "1000_300_hei": getTemplate_config_map ("hei",
+                                                        1000,300,828,
+                                                        "fyrTpl_1000_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_1000_300.png",
+                                                        8),
+                //紫
+                "1000_300_zi": getTemplate_config_map ("zi",
+                                                        1000,300,828,
+                                                        "fyrTpl_1000_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_1000_300.png",
+                                                        8),
+
+
+                /**
+                 * 200*300
+                 */
+                 //红
+                "200_300_hong": getTemplate_config_map ("hong",
+                                                        200,300,196,
+                                                        "fyrTpl_200_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_196_50.png",
+                                                        4),
+                //黄
+                "200_300_huang": getTemplate_config_map ("huang",
+                                                        200,300,196,
+                                                        "fyrTpl_200_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_196_50.png",
+                                                        4),
+                //蓝
+                "200_300_lan": getTemplate_config_map ("lan",
+                                                        200,300,196,
+                                                        "fyrTpl_200_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_196_50.png",
+                                                        4),
+                //绿
+                "200_300_lv": getTemplate_config_map ("lv",
+                                                        200,300,196,
+                                                        "fyrTpl_200_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_196_50.png",
+                                                        4),
+                "200_300_he": getTemplate_config_map ("he",
+                                                        200,300,196,
+                                                        "fyrTpl_200_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_196_50.png",
+                                                        4),
+                //黑
+                "200_300_hei": getTemplate_config_map ("hei",
+                                                        200,300,196,
+                                                        "fyrTpl_200_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_196_50.png",
+                                                        4),
+                //紫
+                "200_300_zi": getTemplate_config_map ("zi",
+                                                        200,300,196,
+                                                        "fyrTpl_200_300",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_196_50.png",
+                                                        4),
+
+
+                /**
+                 * 300*500
+                 */
+                 //红
+                "300_500_hong": getTemplate_config_map ("hong",
+                                                        300,500,296,
+                                                        "fyrTpl_300_500",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //黄
+                "300_500_huang": getTemplate_config_map ("huang",
+                                                        300,500,296,
+                                                        "fyrTpl_300_500",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //蓝
+                "300_500_lan": getTemplate_config_map ("lan",
+                                                        300,500,296,
+                                                        "fyrTpl_300_500",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //绿
+                "300_500_lv": getTemplate_config_map ("lv",
+                                                        300,500,296,
+                                                        "fyrTpl_300_500",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                "300_500_he": getTemplate_config_map ("he",
+                                                        300,500,296,
+                                                        "fyrTpl_300_500",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //黑
+                "300_500_hei": getTemplate_config_map ("hei",
+                                                        300,500,296,
+                                                        "fyrTpl_300_500",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6),
+                //紫
+                "300_500_zi": getTemplate_config_map ("zi",
+                                                        300,500,296,
+                                                        "fyrTpl_300_500",
+                                                        "http://d1.sina.com.cn/litong/zhitou/sinaads/release/spec/logo_178_90.png",
+                                                        6)
+
+            };
+
+            var ui = {
+                timer: {},
+                find: function (id) {
+                    var main = document.getElementById(id),
+                        list;
+                    if (main) {
+                        list = main.getElementsByTagName('ul')[0];
+                    }
+                    return list;
+                },
+                go: function (id, dir, step) {
+                    var list = ui.find(id),
+                        left = 0,
+                        offsetWidth = 0;
+                    if (list) {
+                        left = parseInt(list.style.left, 10) || 0;
+                        offsetWidth = list.offsetWidth;
+
+                        //向左
+                        if (dir === -1) {
+                            if (left < 0) {
+                                list.style.left = left + step + 'px';
+                            }
+                        //向右
+                        } else {
+                            if (left - step > -offsetWidth) {
+                                list.style.left = left - step + 'px';
+                            }
+                        }
+                    }
+                },
+                loop: function (id, step) {
+                    var list = ui.find(id),
+                        left = 0,
+                        offsetWidth = 0;
+                    if (list) {
+                        left = parseInt(list.style.left, 10) || 0;
+                        offsetWidth = list.offsetWidth;
+
+                        if (left - step > -offsetWidth) {
+                            left = left - step;
+                        } else {
+                            left = 0;
+                        }
+                        list.style.left = left + 'px';
+                    }
+                },
+                stopLoop: function (id) {
+                    ui.timer[id] && clearInterval(ui.timer[id]);
+                },
+                startLoop: function (id, step) {
+                    ui.stopLoop(id);
+                    ui.timer[id] = setInterval(function () {
+                        ui.loop(id, step);
+                    }, 5000);
+                },
+                render: function (config, data, id) {
+                    //渲染
+                    var templateName = config.templateName;
+                    document.getElementById(id).innerHTML = AceTemplate.format(templateName,
+                        {
+                            id: id,
+                            goods: data,
+                            config: config
+                        }
+                    );
+                    if((templateName === "fyrTpl_240_200") || 
+                       (templateName === "fyrTpl_240_170")){
+                        ui.startSkip(id,config.pageWidth,"hide");
+                    }else if ((templateName === "fyrTpl_200_300") || 
+                              (templateName === "fyrTpl_300_500")){
+                        ui.startSkip(id,config.pageWidth,"show");
+                    }else if(templateName === "fyrTpl_640_90"){
+                        ui.startSpecialSkip(id);
+                    }else{
+                        ui.startLoop(id, config.pageWidth);
+                     }
+                },
+                skipMove : function (id, index, step) {
+                    var list = ui.find(id),
+                        left = 0,
+                        offsetWidth = 0;
+                    if (list) {
+                        left = parseInt(list.style.left, 10) || 0;
+                        if(index > 0){
+                            list.style.left = -(index * step) + 'px';
+                        }else{
+                            list.style.left = 0 +  'px';
+                        }
+                    }
+                },
+                maskMove : function (id, index, step, type) {
+                    var mask,
+                        temp = 0;
+                    while (document.getElementById("maskRectBtn_" + temp)) {
+                        mask = document.getElementById("maskRectBtn_" + temp);
+                        mask.style.opacity =  (type === 'show') ? .6 : 0;
+                        temp++;
+                    }
+                    mask = document.getElementById("maskRectBtn_" + index);
+                    mask.style.opacity =  (type === 'show') ? 0 : 1;
+                    ui.skipMove(id, index, step);
+                },
+                startSkip: function(id, step, type) {
+                    var mask,
+                        temp = 0,
+                        tempType,
+                        index = 0,
+                        len = 0;
+                    //查找索引ID
+                    while (document.getElementById("maskRectBtn_" + temp)) {
+                        mask = document.getElementById("maskRectBtn_" + temp);
+                        if(mask){
+                            if(type === "show"){
+                                if(mask.style.opacity === "0"){
+                                    index = temp;
+                                }
+                            }else if(type === "hide"){
+                                if(mask.style.opacity != "0"){
+                                    index = temp;
+                                }
+                            }else{
+                                return;
+                            }
+                        }
+                        temp++;
+                    }
+                    
+                    ui.stopLoop(id);
+                    ui.timer[id] = setInterval(function () {
+                        //重新计算索引
+                        index = (index < temp) ? (index + 1) : (index === temp) ? 0 : index ;
+                        //归位
+                        if(index === temp) index = 0;
+                        //移动
+                        ui.maskMove(id, index, step, type);
+                    }, 5000);
+                },
+
+                speciaList:[],
+
+                specialSkipMove : function(index) {
+                    var ul = document.getElementById('a_'+index).parentNode.parentNode;
+                    var dlList = ul.getElementsByTagName('dl');
+
+                    if (dlList && dlList.length > 0) {
+                        var good,
+                            aCont,
+                            container;
+                        for (var i = 0; i < dlList.length; i++) {
+                            good = dlList[i];
+                            aCont = good.getElementsByTagName('a')[0];
+                            container = aCont.getElementsByTagName('div');
+                            if (container && container.length > 0) {
+                                if (aCont.id === ('a_' + index)) {
+                                    // container[0].style.display = 'inline';
+                                    container[0].style.width = 145 + "px";
+                                } else {
+                                    // container[0].style.display = 'none';
+                                    container[0].style.width = 0;
+                                }
+                            }
+                        }
+                    }
+                },
+
+                speciaMaskMove : function (index) {
+                    var mask,
+                        temp = 0;
+                    while (document.getElementById("maskRectBtn_" + temp)) {
+                        mask = document.getElementById("maskRectBtn_" + temp);
+                        if(mask === document.getElementById("maskRectBtn_" + index)){
+                            mask.style.opacity = 1;
+                            ui.specialSkipMove(index); 
+                        }else{
+                            mask.style.opacity = 0;
+                        }
+                        temp++;
+                    }
+                    // console.log('over');
+                },
+
+                startSpecialSkip : function (id) {
+                    var mask,
+                        index = 0,
+                        temp = 0;
+                    //查找索引ID
+                    while (document.getElementById("maskRectBtn_" + temp)) {
+                        mask = document.getElementById("maskRectBtn_" + temp);
+                        if(mask){
+                            if(mask.style.opacity === "1"){
+                                index = temp;
+                                // console.log('1 ----- index: '+index);
+                            }
+                        }
+                        temp++;
+                    }
+                    
+                    ui.stopLoop(id);
+                    ui.timer[id] = setInterval(function () {
+                        //重新计算索引
+                        index = (index < temp) ? (index + 1) : ((index === temp) ? 0 : index);
+                        //归位
+                        if(index === temp) index = 0;
+                        //移动
+                        ui.speciaMaskMove(index);
+                    }, 5000);
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div id="container" class="container"></div>
+        <script type="text/template" id="fyrTpl_1000_90">
+            <div id="#{this.id}" class="ad1000_90" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startLoop('#{id}', 768);">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="left-holder btn" onclick="ui.go('#{id}', -1, 768);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="right-holder btn" onclick="ui.go('#{id}', 1, 768);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{256 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">   
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                </dd>  
+                                <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                <dd class="good-description"></dd>
+                                <dd class="good-tip" style="background-color:#{this.config.tipColor};"><nobr>#{Math.round(good.price / good.oldPrice * 10)}折</nobr></dd>
+                                <dd class="good-old-price" style="color:#{this.config.oldPriceColor};"><del>#{good.oldPrice}</del></dd>
+                                <dd class="good-price" style="color:#{this.config.priceColor};">#{good.price}</dd>
+                                <span class="good-buy" style="background-color:#{this.config.buyColor};">立即购买</span>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+            </div>
+        </script>
+        <script type="text/template" id="fyrTpl_300_250">
+            <div id="#{this.id}" class="ad300_250" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startLoop('#{id}', 238);">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="left-holder btn" onclick="ui.go('#{id}', -1, 238);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="right-holder btn" onclick="ui.go('#{id}', 1, 238);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{119 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">   
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                    <div class="good-old-price" style="color:#{this.config.oldPriceColor};"><del>#{good.oldPrice}</del></div>
+                                    <div class="good-price" style="color:#{this.config.priceColor};">#{good.price}</div>
+                                </dd>  
+                                <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                <dd class="good-description"></dd>
+                                <dd class="good-tip" style="background-color:#{this.config.tipColor};"><nobr>#{Math.round(good.price / good.oldPrice * 10)}</nobr></dd>
+                                <span class="good-buy" style="background-color:#{this.config.buyColor};">立即购买</span>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="fyrTpl_240_200">
+            <div id="#{this.id}" class="ad240_200" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startSkip('#{id}', 233, 'hide');">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{233 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">   
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                </dd>
+                                <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                <dt class="good-price" style="color:#{this.config.buyColor};">￥#{good.price}</dt>
+                                <span class="good-buy" style="background-color:#{this.config.buyColor};">立即购买</span>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+                <div class="ad_pageBtn">
+                    for(var k = 0; k < this.goods.length; k++ ) {
+                        <dd class="maskCircle" id="maskRectBtn_#{k}" 
+                            if(k === 0){
+                                style = "left:0px; opacity:1; background-color:#{this.config.logoBgColor};"
+                            }else{
+                                style = "left:#{0 + 14 * k}px; background-color:#{this.config.logoBgColor};"
+                            }
+                        onclick="ui.maskMove('#{id}', #{k}, 233, 'hide');">
+                        </dd>
+                        <dt class = "circle"></dt>
+                    }
+                </div>
+            </div>
+        </script>
+
+
+        <script type="text/template" id="fyrTpl_240_170">
+            <div id="#{this.id}" class="ad240_170" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startSkip('#{id}', 233, 'hide');">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{233 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                </dd>
+                                <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                <dt class="good-price" style="color:#{this.config.buyColor};">￥#{good.price}</dt>
+                                <dt class="good-sales">↓直降</dt>
+                                <span class="good-buy" style="background-color:#{this.config.buyColor};">立即购买</span>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+
+                <div class="ad_pageBtn">
+                    for(var k = 0; k < this.goods.length; k++ ) {
+                        <dd class="maskCircle" id="maskRectBtn_#{k}" 
+                            if(k === 0){
+                                style = "left:0px; opacity:1; background-color:#{this.config.logoBgColor};"
+                            }else{
+                                style = "left:#{0 + 14 * k}px; background-color:#{this.config.logoBgColor};"
+                            }
+                        onclick="ui.maskMove('#{id}', #{k}, 233, 'hide');">
+                        </dd>
+                        <dt class = "circle"></dt>
+                    }
+                </div>
+               
+            </div>
+        </script>
+
+
+        <script type="text/template" id="fyrTpl_640_90">
+            <div id="#{this.id}" class="ad640_90" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startSpecialSkip('#{id}')">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="good-list-wrap">
+                    ui.speciaList = [];
+                    <ul class="good-list">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">
+                        }
+                            <a href="#{good.exposal_url}" target="_blank" id="a_#{i}" onmouseover="ui.speciaMaskMove('#{i}')" style="display:inline-block;">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                </dd>
+                                //默认第一个展示，其余的只显示图片
+                                // var styleType = (i===0) ? 'display:inline;' : 'display:none';
+                                var styleType = (i===0) ? 'width:145px;' : 'width:0px';
+                                <div class="rightContent" id="rightContent_#{i}" style="#{styleType}">
+                                    <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                    <dt class="good-price" style="color:#{this.config.buyColor};">￥#{good.price}</dt>
+                                    <span class="good-buy" style="background-color:#{this.config.buyColor};">立即购买</span>
+                                </div>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+
+                <div class="ad_pageBtn">
+                    for(var k = 0; k < this.goods.length; k++ ) {
+                        <dt class="maskCircle" id="maskRectBtn_#{k}" 
+                            if(k === 0){
+                                style = "top:22px; opacity:1; background-color:#{this.config.logoBgColor};"
+                            }else{
+                                style = "top:#{22 + 14 * k}px;background-color:#{this.config.logoBgColor};"
+                            }
+                        onclick="ui.speciaMaskMove('#{k}');">
+                        </dt>
+                        <dt class = "circle"></dt>
+                    }
+                </div>
+            </div>
+        </script>
+
+
+        <script type="text/template" id="fyrTpl_950_90">
+            <div id="#{this.id}" class="ad950_90" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startLoop('#{id}', 702);">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="left-holder btn" onclick="ui.go('#{id}', -1, 702);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="right-holder btn" onclick="ui.go('#{id}', 1, 702);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{234 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">   
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                </dd>
+                                <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                <dd class="good-description"></dd>
+                                <dd class="good-tip" style="background-color:#{this.config.tipColor};"><nobr>#{Math.round(good.price / good.oldPrice * 10)}折</nobr></dd>
+                                <dd class="good-old-price" style="color:#{this.config.oldPriceColor};"><del>#{good.oldPrice}</del></dd>
+                                <dd class="good-price" style="color:#{this.config.priceColor};">￥#{good.price}</dd>
+                                <span class="good-buy" style="background-color:#{this.config.buyColor};">立即购买</span>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+
+        <script type="text/template" id="fyrTpl_1000_300">
+            <div id="#{this.id}" class="ad1000_300" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startLoop('#{id}', 828);">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="left-holder btn" onclick="ui.go('#{id}', -1, 828);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="right-holder btn" onclick="ui.go('#{id}', 1, 828);">
+                    <div class="bg"></div>
+                    <div class="front"></div>
+                </div>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{207 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">   
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                </dd>  
+                                <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                <dd class="good-description"></dd>
+                                <dd class="good-tip" style="background-color:#{this.config.tipColor};"><nobr>#{Math.round(good.price / good.oldPrice * 10)}折</nobr></dd>
+                                <dd class="good-old-price" style="color:#{this.config.oldPriceColor};"><del>#{good.oldPrice}</del></dd>
+                                <dd class="good-price" style="color:#{this.config.priceColor};">￥ #{good.price}</dd>
+                                <span class="good-buy" style="background-color:#{this.config.buyColor};">立即购买</span>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+
+        <script type="text/template" id="fyrTpl_200_300">
+            <div id="#{this.id}" class="ad200_300" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startSkip('#{id}', 196, 'show');">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{196 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}" />
+                                </dd> 
+                                <dd class="good-price">￥#{good.price}</dd>
+                                <dt class="good-title" style="color:#fff;">#{good.ad_title}</dt>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+
+                <div class="icoList">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var icoGood = this.goods[i];
+                        <dd class="icoMask" id="maskRectBtn_#{i}" 
+                            if(i === 0){
+                                style = "left:0px; opacity:0;"
+                            }else{
+                                style = "left:#{49 * i}px;"
+                            }
+                        onclick="ui.maskMove('#{id}', #{i}, 196, 'show');">
+                        </dd>
+                        <dl class="icoList_image">
+                            <img src="#{icoGood.image_url}"/>
+                        </dl>
+                    };
+                </div>
+            </div>
+        </script>    
+
+
+        <script type="text/template" id="fyrTpl_300_500">
+            <div id="#{this.id}" class="ad300_500" style="border-color:#{this.config.borderColor};" onmouseover="ui.stopLoop('#{id}');" onmouseout="ui.startSkip('#{id}', 296, 'show');">
+                <a href="#{this.config.logoURL}" target="_blank" class="ad-logo" style="background:url(#{this.config.logo}) no-repeat center center #{this.config.logoBgColor};_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{this.config.logo}');_background-image:none;"></a>
+                <div class="good-list-wrap">
+                    <ul class="good-list" style="width:#{296 * this.goods.length}px;">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var good = this.goods[i];
+                        if (i === this.goods.length - 1) {
+                            <dl class="good last-good">
+                        } else {
+                            <dl class="good">   
+                        }
+                            <a href="#{good.exposal_url}" target="_blank">
+                                <dd class="good-image">
+                                    <img src="#{good.image_url}" alt="#{good.ad_title}"/>
+                                </dd>  
+                                <dt class="good-title" style="color:#{this.config.titleColor};">#{good.ad_title}</dt>
+                                <dd class="good-price" style="color:#{this.config.priceColor};">￥#{good.price}</dd>
+                            </a>
+                        </dl>
+                    }
+                    </ul>
+                </div>
+
+                <div class="icoList">
+                    for (var i = 0; i < this.goods.length; i++) {
+                        var icoGood = this.goods[i];
+                        <dd class="icoMask" id="maskRectBtn_#{i}" 
+                            if(i === 0){
+                                style = "left:0px; opacity:0;"
+                            }else{
+                                style = "left:#{49 * i}px;"
+                            }
+                        onclick="ui.maskMove('#{id}', #{i}, 296, 'show');">
+                        </dd>
+                        <dl class="icoList_image">
+                            <img src="#{icoGood.image_url}"/>
+                        </dl>
+                    };
+                </div>
+            </div>
+        </script>
+
+
+
+        <script>
+            var ad_config = (function () {
+                var querys = window.name,
+                    query,
+                    i = 0,
+                    params = {};
+
+                if (querys) {
+                    querys = querys.split('&');
+                    while(query = querys[i++]) {
+                        query = query.split('=');
+                        params[query[0]] = decodeURIComponent(query[1]);
+                    }
+                }
+                return params;
+            })();
+
+            if (TEMPLATE_CONFIG_MAP[ad_config.tid]) {
+                var config = TEMPLATE_CONFIG_MAP[ad_config.tid];
+
+                //临时为suning做的hack,
+                //杨杰说现在只有suning一个客户，先这么写死吧，扶翼管理端根本没有这个url填写的地方
+                //我也没有办法。。。
+                //以此为证2015-12-09
+                config['logoURL'] = 'http://www.suning.com/?utm_source=zq-sina&utm_medium=fuyicpc';
+                for (var key in ad_config) {
+                    // if(key!=='logo'){
+                        config[key] = ad_config[key];
+                    // }
+                }
+
+                var originGoods = (new Function("return (" + config.goods + ")"))(),
+                    originGoodsLen = originGoods.length;
+
+                if (originGoodsLen > 0) {
+                    //把数据补充到需要的商品数，如果不足的话
+                    var goods = [];
+                    for (var i = 0; i < config.goodsNum; i++) {
+                        goods.push(originGoods[i] ? originGoods[i] : originGoods[i % originGoodsLen]);
+                    }
+
+                    //渲染
+                    ui.render(
+                        config, 
+                        goods,
+                        'container'
+                    );
+                }
+            }
+        </script>
+    </body>
+</html>
