@@ -1,0 +1,8 @@
+
+WebPageTest用来从浏览器获取性能数据。
+
+在Windows系统下，所有的传输都是通过Windows Sorket API完成，几乎所有的应用程序都使用TCP/IP协议。
+
+
+
+WebPageTest能够拦截任意函数调用和检查，可以中途改变请求和响应。
