@@ -3,10 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <title>test</title>
+  <link rel="stylesheet" href="http://n0.sinaimg.cn/finance/pctianyi_wdg/dist/css/card-tpls-base.css">
 </head>
 <body>
-  <script>(function(d,s,id){var s,n=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;s=d.createElement(s);s.id=id;s.setAttribute('charset','utf-8');s.src='//d'+Math.floor(0+Math.random()*(9-0+1))+'.sina.com.cn/litong/zhitou/sinaads/release/sinaads.js';n.parentNode.insertBefore(s,n);})(document,'script','sinaads-script');</script>
-  <ins class="sinaads" data-ad-pdps="PDPS000000057406"></ins>
-  <script>(sinaads = window.sinaads || []).push({});</script>
+
+<div style="width: 640px;height: 141px;" id="showid">
+
+</div>
+
+<!-- <script src="sinaads.js"></script> -->
+
+<!-- <script src="loadScript.js"></script>
+<script src="jsonp.js"></script> -->
+<script>
+        /**
+     * 加载js模块
+     * @param  {String} url          资源地址
+     * @param  {Function} opt_callback 成功后回调方法
+     * @param  {Object} opt_options  选项
+     */
+    function loadScript (url, optCallback, optOptions) {
+        var scr = document.createElement("SCRIPT"),
+            scriptLoaded = 0,
+            options = optOptions || {},
+            charset = options.charset || 'utf-8',
+            callback = optCallback || function () {},
+            timeOut = options.timeout || 0,
+            timer;
+
+        // IE和opera支持onreadystatechange
+        // safari、chrome、opera支持onload
+        scr.onload = scr.onreadystatechange = function () {
+            // 避免opera下的多次调用
+            if (scriptLoaded) {
+                return;
+            }
+
+            var readyState = scr.readyState;
+            if ('undefined' === typeof readyState ||
+                readyState === "loaded" ||
+                readyState === "complete") {
+                scriptLoaded = 1;
+                try {
+                    callback();
+                    clearTimeout(timer);
+                } finally {
+                    scr.onload = scr.onreadystatechange = null;
+                    _removeScriptTag(scr);
+                }
+            }
+        };
+
+        if (timeOut) {
+            timer = setTimeout(function () {
+                scr.onload = scr.onreadystatechange = null;
+                _removeScriptTag(scr);
+                options.onfailure && options.onfailure();
+            }, timeOut);
+        }
+        _createScriptTag(scr, url, charset);
+    }
+
+    /**
+     * jsonp方式回调
+     * @param  {String}   url         资源地址
+     * @param  {Function} callback    回调方法
+     * @param  {Object}   opt_options 选项
+     */
+    function jsonp(url, callback, optOptions) {
+        var scr = document.createElement('SCRIPT'),
+            prefix = '_sinaads_cbs_',
+            callbackName,
+        // callbackImpl,
+            options = optOptions || {},
+            charset = options.charset || 'utf-8',
+            queryField = options.queryField || 'callback',
+            timeOut = options.timeout || 0,
+            timer,
+            reg = new RegExp('(\\?|&)' + queryField + '=([^&]*)'),
+            matches;
+
+        function getCallBack(onTimeOut) {
+
+            return function () {
+                try {
+                    if (onTimeOut) {
+                        options.onfailure && options.onfailure();
+                    } else {
+                        callback.apply(window, arguments);
+                        clearTimeout(timer);
+                    }
+                    window[callbackName] = null;
+                    delete window[callbackName];
+                } catch (e) {
+                    // ignore the exception
+                } finally {
+                    _removeScriptTag(scr);
+                }
+            };
+        }
+
+        if (isString(callback)) {
+            // 如果callback是一个字符串的话，就需要保证url是唯一的，不要去改变它
+            //  当调用了callback之后，无法删除动态创建的script标签
+            callbackName = callback;
+        } else {
+            if ((matches = reg.exec(url))) {
+                callbackName = matches[2];
+            }
+        }
+        if (!callbackName) {
+            callbackName = prefix + Math.floor(Math.random() * 2147483648).toString(36);
+        }
+
+        if (isFunction(callback)) {
+            window[callbackName] = getCallBack(0);
+        }
+        if (timeOut) {
+            timer = setTimeout(getCallBack(1), timeOut);
+        }
+
+        //如果用户在URL中已有callback，用参数传入的callback替换之
+        url = url.replace(reg, '\x241' + queryField + '=' + callbackName);
+
+        if (url.search(reg) < 0) {
+            url += (url.indexOf('?') < 0 ? '?' : '&') + queryField + '=' + callbackName;
+        }
+        _createScriptTag(scr, url, charset);
+    }
+
+    function _createScriptTag(scr, url, charset) {
+        scr.setAttribute('type', 'text/javascript');
+        charset && scr.setAttribute('charset', charset);
+        scr.setAttribute('src', url);
+        document.getElementsByTagName('head')[0].appendChild(scr);
+    }
+
+    function _removeScriptTag(scr) {
+        if (scr && scr.parentNode) {
+            scr.parentNode.removeChild(scr);
+        }
+        scr = null;
+    }
+
+
+    /**
+     * 判断是否是函数
+     * @param  {Any}        source      需要判断的对象
+     * @return {Boolean}                是否是函数
+     * @staitc
+     */
+    function isFunction(source) {
+        return '[object Function]' === Object.prototype.toString.call(source);
+    }
+
+
+    /**
+     * 判断是否是字符串
+     * @param  {Any} source 要判断的对象
+     * @return {Boolean}        是否字符串
+     * @static
+     */
+    function isString(source) {
+        return '[object String]' === Object.prototype.toString.call(source);
+    }
+</script>
+
+<script>
+function gethCardHtml (data, div) {
+    if (data.img.indexOf('360') !== -1) {
+        var uuid = 'fake_div_' + (+new Date()).toString(36);
+        div.innerHTML= '<div id="' + uuid + '"></div>';
+
+        loadScript('qh360.js?id=' + uuid)
+    }
+}
+gethCardHtml({img: '360'}, document.getElementById('showid'));
+</script>
+
+
+
+
 </body>
 </html>
