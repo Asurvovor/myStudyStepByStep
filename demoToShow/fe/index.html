@@ -6,15 +6,83 @@
 </head>
 <body>
 	hello
-<br><br><br><br>
+    <br><br><br><br>
 
-  <div id="div1">闲来垂钓碧溪上，忽复乘舟梦日边</div>
+    <div id="div1">闲来垂钓碧溪上，忽复乘舟梦日边</div>
 </body>
 <script>
-var div1 = document.getElementById('div1');
-div1.addEventListener('click',function () {
-    this.style.color = 'red';
-});
+    var div1 = document.getElementById('div1');
+    div1.addEventListener('click',function () {
+        this.style.color = 'red';
+    });
 
+
+
+    function format(source, opts) {
+        source = String(source);
+        var data = Array.prototype.slice.call(arguments, 1),     // 把opts及其后面的参数转化成一个数组
+        toString = Object.prototype.toString;
+        if (data.length) {
+            data = data.length === 1 ?
+            /* ie 下 Object.prototype.toString.call(null) == '[object Object]' */
+            (opts !== null && (/\[object Array\]|\[object Object\]/.test(toString.call(opts))) ? opts : data) : data;
+
+            // if (data.length === 1) {
+            //     if ( opts !== null && (/\[object Array\]|\[object Object\]/.test(toString.call(opts))) ) {
+            //         data = opts;
+            //     }
+            // }
+
+            return source.replace(/#\{(.+?)\}/g, function (match, key, pos) {    // replace第二个参数是function的时候，这个function的第一个参数是捕获的匹配项，倒数第二个参数是匹配项在字符串中的位置，最后一个参数是原始字符串
+                alert(pos)
+                var replacer = data[key];
+                // chrome 下 typeof /a/ == 'function'
+                if ('[object Function]' === toString.call(replacer)) {
+                    replacer = replacer(key);
+                }
+                return ('undefined' === typeof replacer ? '' : replacer);
+            });
+        }
+        return source;
+    }
+
+    // console.log(format('#{key}',{key:6}))
+var escapeMap = {
+                "\b": '\\b',
+                "\t": '\\t',
+                "\n": '\\n',
+                "\f": '\\f',
+                "\r": '\\r',
+                '"' : '\\"',
+                "\\": '\\\\'
+            };
+function encodeString(source) {
+    // var toString = Object.prototype.toString;
+                if (/["\\\x00-\x1f]/.test(source)) {
+                    source = source.replace(
+                        /["\\\x00-\x1f]/g,
+                        function (match) {
+                            alert(match)
+                            debugger;
+                            var c = escapeMap[match];
+                            if (c) {
+                                return c;
+                            }
+                            c = match.charCodeAt();
+                            return "\\u00" + Math.floor(c / 16).toString(16) + (c % 16).toString(16);
+                        });
+                }
+                return '"' + source + '"';
+            }
+    // var da=[1,2,3];
+    // var toString = Object.prototype.toString;
+    // function xxx(match, key) {
+    //     var rep = da[key];
+    //     if ('[object Function]' === toString.call(rep)) {
+    //         rep = rep(key);
+    //     } else {
+    //         return ('undefined' === typeof rep ? '' : rep)
+    //     }
+    // }
 </script>
 </html>

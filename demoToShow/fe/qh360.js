@@ -109,6 +109,7 @@ function isString(source) {
 
 
 
+
     // debugger;
     var currentScript = getCurrentScript();
     // console.log(currentScript)
@@ -159,7 +160,7 @@ function isString(source) {
 
 
     var logo_ico = '<div style="width:26px;height:13px;position:absolute;right:16px;bottom:16px;z-index:99;background:url(//d2.sina.com.cn/litong/zhitou/sinaads/release/ad_logo_update_IAB.gif) no-repeat;"></div>';
-    var url = "http://show.g.mediav.com/s?type=1&of=4&newf=1&showid=RSBpV9&uid=14703100938272515666870689766453&impct=1";
+    var url = "http://show.g.mediav.com/s?type=1&of=4&newf=1&showid=ea2EuC&uid=14703100938272515666870689766453&impct=1";
 
     jsonp(url, function (data) {
         var  html = '';
@@ -173,8 +174,8 @@ function isString(source) {
             desc   : ads.desc,
             title  : ads.title,
             link   : ads.curl,
-            imptk  : ads.imptk[0] || ads.imptk[1],
-            cltkt  : ads.cltkt,
+            imptk  : ads.imptk,
+            clktk  : ads.clktk,
             assets : ads.assets || []
         };
         switch(myapp.type){
@@ -210,25 +211,49 @@ function isString(source) {
 
         var node = document.getElementById(divId);
         node.innerHTML = html;
-        node.setAttribute('imptk', myapp.imptk);
 
-        // cbName(html);
+        /**
+         监听事件的兼容处理
+        */
+        function onEvent(obj, type, callback) {
+            if (obj.addEventListener) {
+                obj.addEventListener(type, callback);
+            } else if (obj.attachEvent) {
+                obj.attachEvent('on' + type, callback)
+            }
+        }
+        /**
+         点击监测
+        */
+        var clcPV = new Array();
+        var clcCnt = 0;
+        function onClickExpose() {
+            for (var i = 0, len = myapp.clktk.length; i < len; i++ ){
+                // console.log("一次点击发几条曝光"+ len)
+                clcPV[clcCnt] = new Image();
+                clcPV[clcCnt].src = myapp.clktk[i];
+                clcCnt++;
+                // console.log("一共几条点击"+ clcCnt)
+            }
+        }
+        /**
+          可见曝光
+        */
+        var imgVision = new Array();
+        for (var i = 0, len = myapp.imptk.length; i < len; i++ ) {
+            // console.log("可见曝光几条"+len)
+            imgVision[i] = new Image();
+            imgVision[i].src = myapp.imptk[i];
+        }
+        /**
+          点击监测
+        */
+        var links = node.getElementsByTagName('a');
+        for (var i = 0, len = links.length; i < len; i++ ) {
+            // console.log("a链接数"+len)
+            onEvent(links[i], 'mousedown', onClickExpose);
+        }
 
-
-        // html = [
-        //     '<div class="ty-card ty-card-type1 clearfix">',
-        //     '<div class="ty-card-l">',
-        //     '<div class="ty-card-thumb-w"><a href="' + myapp.link + '" target="_blank"><img src="' + myapp.img + '" alt="" class="ty-card-thumb" width="150" height="100"></a></div>',
-        //     '</div>',
-        //     '<div class="ty-card-r">',
-        //     '<h3 class="ty-card-tt" style="padding-top:16px;"><a href="' + myapp.link + '" target="_blank">' + myapp.title + '</a></h3>',
-        //     '</div>',
-        //     '</div>'].join('');
-
-        // var showid = document.getElementById('showid');
-        // showid.innerHTML = html;
-        // document.body.innerHTML = html;
-        // return html;
     }, {queryField: 'jsonp'});
 })();
 

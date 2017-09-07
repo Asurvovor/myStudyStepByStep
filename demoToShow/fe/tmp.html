@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>just 4 test</title>
+</head>
+<body>
+<!-- <script src="sinaads.full.js"></script> -->
+<!-- PDPS000000058046 -->
+<!-- PDPS000000043762, -->
+<!-- <ins class="sinaads" data-ad-pdps="PDPS000000056030,PDPS000000057473"></ins> -->
+<!-- <ins class="sinaads" data-ad-pdps="PDPS000000043762"></ins>
+<script>(sinaads = window.sinaads || []).push({});</script> -->
+
+
+<div id="exp" style="width: 200px;height: 200px;background-color: red;"></div>
+<script>
+    function onEvent(obj, type, callback) {
+        if (obj.addEventListener) {
+            obj.addEventListener(type, callback);
+        } else if (obj.attachEvent) {
+            obj.attachEvent('on' + type, callback)
+        }
+    }
+    var clcPV = new Array();
+    var clcCnt = 0;
+    function onClickExpose(){
+        clcPV[clcCnt] = new Image();
+        clcPV[clcCnt].src = "http://max-l.mediav.com/rtb?type=3&d=100&b=1190a3cb38e23b66&p=2086462&l=130&s=1&k=qzjb6wAAAAA=&i=8FhyUYSB1Jqi&v=44349260114301823080017&turl=";
+        // clcPV[clcCnt].src = "http://www.sina.com.cn";
+        clcCnt++;
+    }
+
+    var exp = document.getElementById('exp');
+    onEvent(exp, 'click',onClickExpose);
+</script>
+</body>
+</html>

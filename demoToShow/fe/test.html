@@ -9,12 +9,19 @@
 
 <div style="width: 640px;height: 141px;" id="showid">
 
+
+
+
 </div>
+<!-- <ins class="sinaads" data-ad-pdps="PDPS000000060670" id="showid"></ins>
+<script>(sinaads = window.sinaads || []).push({})</script> -->
 
-<!-- <script src="sinaads.js"></script> -->
 
-<!-- <script src="loadScript.js"></script>
-<script src="jsonp.js"></script> -->
+<script src="loadScript.js"></script>
+
+<!-- <script src="jsonp.js"></script> -->
+
+<!--
 <script>
         /**
      * 加载js模块
@@ -169,8 +176,12 @@
     }
 </script>
 
+-->
+
+
+
 <script>
-function gethCardHtml (data, div) {
+function getCardHtml (data, div) {
     if (data.img.indexOf('360') !== -1) {
         var uuid = 'fake_div_' + (+new Date()).toString(36);
         div.innerHTML= '<div id="' + uuid + '"></div>';
@@ -178,7 +189,7 @@ function gethCardHtml (data, div) {
         loadScript('qh360.js?id=' + uuid)
     }
 }
-gethCardHtml({img: '360'}, document.getElementById('showid'));
+getCardHtml({img: '360'}, document.getElementById('showid'));
 </script>
 
 
