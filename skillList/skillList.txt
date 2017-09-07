@@ -1,0 +1,21 @@
+我需要会玩的技能和软件：
+
+编程类：
+    语言：C，C++，Java，Python，JavaScript，PHP，Go，R，MATLAB
+    数据库：MySQL，MongoDB，Oracle，redis，postgreSQL
+    系统：Linux，docker，kubernetes，Android，iOS，Hadoop
+    工具：vim，Apache，Git/GitHub/gitlib，Nginx，sublime text，VS，AS，Xcode
+    游戏引擎：unity，cocos，unreal
+
+
+设计类：
+   Photoshop、AI
+
+
+
+产品类：
+   Axure
+
+
+
+-----未完待续---待修正----
