@@ -5,7 +5,44 @@
     <title>just 4 test</title>
 </head>
 <body>
-<!-- <script src="sinaads.full.js"></script> -->
+
+
+<script src="sinaads.full.js"></script>
+<ins class="sinaads" data-ad-pdps="PDPS000000056819" style="margin-top:10px;"></ins>
+        <script>(sinaads = window.sinaads || []).push({});</script>
+
+<!-- 在广告埋点代码前插入下面的模拟数据即可不通过sax投放静态广告数据 -->
+<script>
+_sinaadsCacheData = window._sinaadsCacheData || {};
+_sinaadsCacheData['shichuang'] = {   //pdps
+    "type" : "videoWindow",   //sax使用类型，见相关映射表格
+    "content" : [
+        {
+            "monitor":[""],  //点击监测
+            "link":[""],   //落地页
+            "type":["video"],  //广告类型
+            "pv":[],   //曝光监测
+            "src":[
+                // "http://d1.sina.com.cn/201401/03/532368_BT-950-450-0103-LYYM.swf"  //素材，多个素材依次排列
+                "http://d1.sina.com.cn/litong/zhitou/sinaads/demo/jiliang/nstd/nongfushanquan-test.flv"
+            ]
+        }
+    ],
+    "size":"400*400",  //广告尺寸
+    "id":"shichuang"   //pdps
+};
+</script>
+
+<span id="videoWindowWrap"></span>
+<ins class="sinaads" data-ad-pdps="shichuang" data-ad-type="videoWindow"></ins>
+<script>
+(sinaads = window.sinaads || []).push({
+    params : {
+         sinaads_frequence : 60 * 10
+    }
+});
+</script>
+
 <!-- PDPS000000058046 -->
 <!-- PDPS000000043762, -->
 <!-- <ins class="sinaads" data-ad-pdps="PDPS000000056030,PDPS000000057473"></ins> -->
@@ -13,7 +50,7 @@
 <script>(sinaads = window.sinaads || []).push({});</script> -->
 
 
-<div id="exp" style="width: 200px;height: 200px;background-color: red;"></div>
+<!-- <div id="exp" style="width: 200px;height: 200px;background-color: red;"></div>
 <script>
     function onEvent(obj, type, callback) {
         if (obj.addEventListener) {
@@ -33,6 +70,6 @@
 
     var exp = document.getElementById('exp');
     onEvent(exp, 'click',onClickExpose);
-</script>
+</script> -->
 </body>
 </html>
