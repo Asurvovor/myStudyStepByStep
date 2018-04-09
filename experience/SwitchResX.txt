@@ -1,0 +1,10 @@
+SwitchResX
+
+调整屏幕分辨率  HiDPI
+
+下载安装包—>注册码破解—>选择显示器，自定义分辨率，注意类型是scaled 方法到高倍, 如3840*2160
+—>
+Sip取消 ： 重启—>command+R—>命令行csrutil disable
+—>
+选择HiDPI分辨率 如 1920*1080 
+—>ok
